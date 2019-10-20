@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="COSC2329">
+    <meta name="author" content="Amanda Lewis">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/css/homeTheme.css" type="text/css" />
+    <link rel="stylesheet" href="./css/table.css" type="text/css" />
+    <script type="text/javascript" src="./js/insert.js"></script>
+    
+
+
+    <title> Restaurant Insert </title>
+
+</head>
+
+<body>
+    
+    <div class="nav">
+            <div class="floatleft">
+                <h2>Amanda Lewis & Samita Damani</h2>
+                <p>Database Project - Restaurant Insert</p>
+            </div>
+            <div class="floatright">
+                <button type="button" class="button" id="button1" onclick="location.href='./insert.html';">Restaurant Insert</button>
+                <button type="button" class="button" id="button2" onclick="location.href='./select.html';">Restaurant Select</button>
+                <button type="button" class="button" id="button3" onclick="location.href='./update.html';">Restaurant Update</button>
+            </div>
+        <div class='clear'></div>
+     </div>
+    <div class='content'>
+        <div class="floatleft">
+            <div class="form">
+                <form id="customerForm">
+                    <fieldset>
+                        <legend> Customer Information: </legend>
+                        Enter name: <input type="text" id="customerName"><br>
+                        <input type="submit" value="Submit" onclick="makeCustomerRequest()">
+                        <p id="custName"> </p>
+                    </fieldset>
+                </form>
+            </div> <!-- close form -->
+        <br>
+        <br>
+        <div class="form">
+            <form id="orderForm">
+            <fieldset>
+                <legend> Place an order: </legend>
+                Enter name: <input type="text" id="customerNameOrder" value=""><br>
+                <select id="menuItems" size="4" multiple>
+                    <option value="1" name="Turkey Sandwich with Gravy">Turkey Sandwich with Gravy: $13.50</option>
+                    <option value="2" name="3-in-1 Potatoes">3-in-1 Potatoes: $12.35</option>
+                    <option value="3" name="Mac-n-Cheese">Mac-n-Cheese: $14.74</option>
+                    <option value="4" name="Chicken Lasagna">Chicken Lasagna: $25.00</option>
+                    <option value="5" name="Half-Baked Harvest">Half-Baked Harvest: $20.15</option>
+                    <option value="6" name="Healthy Foodie">Healthy Foodie: $12.25</option>
+                    <option value="7" name="Roasted Turkey Legs">Roasted Turkey Legs: $8.50</option>
+                    <option value="8" name="Chicken Empanada">Chicken Empanada: $7.00</option>
+                    <option value="9" name="Lava Cake">Lava Cake: $9.25</option>
+                    <option value="10" name="Trifle">Trifle: $10.90</option>
+                </select> 
+                <br>
+                <input type="submit" value="Submit" onclick="makeOrderRequest()">
+                <p id="orderError"></p>
+                <table id="orderRingup"></table>
+            </fieldset>
+        </form>
+        </div> <!-- close form div -->
+        <br>
+        <br>
+        <div class="form">
+        <form id="reservationForm">
+            <fieldset>
+                <legend>Make a Reservation: </legend>
+            Select date: <br>
+            <select size="5" id="month">
+                <option value="01">January</option>
+                <option value="02">February</option>
+                <option value="03">March</option>
+                <option value="04">April</option>
+                <option value="05">May</option>
+                <option value="06">June</option>
+                <option value="07">July</option>
+                <option value="08">August</option>
+                <option value="09">September</option>
+                <option value="10">October</option>
+                <option value="11">November</option>
+                <option value="12">December</option>
+            </select>
+            <select size="5" id="day">
+                <option value="01">1</option>
+                <option value="02">2</option>
+                <option value="03">3</option>
+                <option value="04">4</option>
+                <option value="05">5</option>
+                <option value="06">6</option>
+                <option value="07">7</option>
+                <option value="08">8</option>
+                <option value="09">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+                <option value="26">26</option>
+                <option value="27">27</option>
+                <option value="28">28</option>
+                <option value="29">29</option>
+                <option value="30">30</option>
+                <option value="31">31</option>
+            </select>
+            <select size="5" id="year">
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
+                <option value="2021">2021</option>
+                <option value="2022">2022</option>
+                <option value="2023">2023</option>
+            </select>
+            <br>
+            
+            Select time<select size="5" id="time">
+                <option value="11:00:00">11:00AM</option>
+                <option value="12:00:00">12:00PM</option>
+                <option value="1:00:00">1:00PM</option>
+                <option value="2:00:00">2:00PM</option>
+                <option value="3:00:00">3:00PM</option>
+                <option value="4:00:00">4:00PM</option>
+                <option value="5:00:00">5:00PM</option>
+                <option value="6:00:00">6:00PM</option>
+                <option value="7:00:00">7:00PM</option>
+                <option value="8:00:00">8:00PM</option>
+            </select><br>
+            Enter party size: (1-12) <input type="text" id="partySize" value="0"><br>
+            Enter party name: <input type="text" id="partyName"> <br>
+            Enter your name: <input type="text" id="customerNameReservation"> <br>
+            <input type="submit" value="Place Reservation" onclick="makeReservationRequest()">
+            <p id="reservationError"></p><br>
+            <p id="reservationConfirm"></p>
+            </fieldset>
+        </form>
+        </div> <!-- close form div -->
+        </div>
+        <div class="clear"></div>
+    </div> <!-- end of content -->
+    <div class="footer">
+        <h5>Contact: </h5>
+        <p>alewis3@stedwards.edu or sdamani2@stedwards.edu</p>
+    </div>
+</body>
