@@ -1,6 +1,6 @@
 
 body {
-	font: 12px/18px Aileron, Arial, sans-serif;
+	font: 12px/18px "Aileron", Arial, sans-serif;
 	height: 100%;
 }
 .wrapper {
@@ -19,22 +19,22 @@ body {
     src: url("aileron/Aileron-Regular.otf") format("opentype");
 }
 @font-face {
-    font-family: Aileron;
+    font-family: Aileron-Italic;
     font-weight: italic;
     src: url("aileron/Aileron-BlackItalic.otf") format("opentype");
 }
 @font-face {
-    font-family: Aileron;
+    font-family: Aileron-Bold;
     font-weight: bold;
     src: url("aileron/Aileron-Bold.otf") format("opentype");
 }
 @font-face {
-    font-family: Aileron;
+    font-family: Aileron-Heavy;
     font-weight: heavy;
     src: url("aileron/Aileron-Heavy.otf") format("opentype");
 }
 @font-face {
-    font-family: Aileron;
+    font-family: Aileron-Light;
     font-weight: light;
     src: url("aileron/Aileron-Light.otf") format("opentype");
 }
@@ -79,14 +79,16 @@ img.center {
 .courseLinks {
 	display: block;
 	float: left;
-	width: 90%;
+	width: 100%;
 	background: #E8AF78;
+	padding: 20px;
 }
 .coursesTaken {
 	display: block;
 	float: left;
-	width: 90%;
+	width: 100%;
 	background: #E8E8E8;
+	padding: 20px;
 }
 .coursesTaken table {
 	border-collapse: collapse;
@@ -95,7 +97,14 @@ img.center {
 .coursesTaken table, th, td {
 	border: 1px solid black;
 	text-align: left;
-  }
+}
+.contact {
+	background: #E8AF78;
+	display: block;
+	float: left;
+	width: 100%;
+	padding: 20px
+}
 #topBtn {
 	display: none; /* Hidden by default */
 	position: fixed; /* Fixed/sticky position */
@@ -114,6 +123,28 @@ img.center {
   
   #topBtn:hover {
 	background-color: #555; /* Add a dark-grey background on hover */
+  }
+  label {
+	display: block;
+	width: 140px;
+	text-align: left;
+  }​
+  .form-control {
+	  display: block;
+	  float: left;
+	  width: 300px;
+	  border: 2px;
+	  border-color: black;
+  }
+  .form-control::after {
+	  clear: both;
+  }
+  button, input, select, textarea {
+	font-family : inherit;
+	font-size   : 100%;
+	width : 300px;
+  	margin: 0;
+  	box-sizing: border-box;
   }
 
 

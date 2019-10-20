@@ -8,7 +8,7 @@
 	<meta name="keywords" content="" />
 	<meta name="description" content="" />
 	<link href="style.css" rel="stylesheet">
-	<script src="execute.js"></script>
+	<script type="text/javascript" src="execute.js"></script>
 </head>
 
 <body>
@@ -17,48 +17,55 @@
 
 	<button onclick="topFunction()" id="topBtn" title="Go to top">Top</button>
 	<header class="header">
-		<img class="center" src="images/cover.png" alt="Amanda Lewis Cover" class="center">
+		<img class="center" src="images/cover.png" alt="Amanda Lewis Cover">
+		<div class="nav">
+			<a href="#" onclick="transport(this)" type="aboutMe">ABOUT ME</a>
+			<a href="#" onclick="transport(this)" type="courseLinks">COURSE LINKS</a>
+			<a href="#" onclick="transport(this)" type="coursesTaken">COURSES TAKEN</a>
+			<a href="#" onclick="transport(this)" type="contact">CONTACT</a>
+		</div>
 	</header><!-- .header-->
 
 	<main class="content">
-		<div class="floatleft">
+		<div class="floatleft" id="aboutMe">
 			<img class="center" src="images/linkedin.jpg" alt="Amanda Lewis">
 		</div>
 		<div class="floatright">
 			<h2>A Little About Amanda: </h2>
-			<p>Amanda Lewis is a Senior Computer Science major at St. Edward's University who interned over the past summer at Modernize on a scrum team of about 10. She worked on tickets ranging from bugs to new features. Currently she is working on her Senior Project and her Software Engineering II project about IoT devices. She is interested in developing complex systems and learning more about backend frameworks like python and node.js express API apps.</p>
+			<p>Amanda Lewis is a Senior Computer Science major at St. Edward's University who interned over the past summer at Modernize on a scrum team of about 10. She worked on tickets ranging from bugs to new features. Currently she is working on her Senior Project and her Software Engineering II project. She is interested in developing complex systems and learning more about backend frameworks like python and node.js express API apps.</p>
 		</div>
 		<div class="clear"></div>
-		<div class="courseLinks">
+		<div class="courseLinks" id="courseLinks">
 			<h2>Course Links: </h2>
 			<h3>Spring 2018</h3>
 				<ul>
-					<li><a href="showCourse()">COSC 2328 - WEB PROGRAMMING</a></li>
-					<li><a href="showCourse()">COSC 2329 - COMPONENT-BASED PROGRAMMING</a></li>
-					<li><a href="showCourse()">COSC 2331 - COMPUTER ORGANIZATION & ARCHITECTURE</a></li>
+					<li><a onclick="showCourse(this)" type="component" href="#courseLinks">COSC 2329 - COMPONENT-BASED PROGRAMMING</a></li>
+					<li><a onclick="showCourse(this)" type="arch" href="#courseLinks">COSC 2331 - COMPUTER ORGANIZATION & ARCHITECTURE</a></li>
 				</ul>
 			<h3>Fall 2018</h3>
 				<ul>
-					<li><a href="showCourse()">COSC 3325 - COMPUTER SECURITY AND PRIVACY</a></li>
-					<li><a href="showCourse()">COSC 3327 - ALGORITHMS AND DATA STRUCTURES</a></li>
-					<li><a href="showCourse()">COSC 3336 - PROGRAMMING LANGUAGES</a></li>
+					<li><a onclick="showCourse(this)" type="security" href="#courseLinks">COSC 3325 - COMPUTER SECURITY AND PRIVACY</a></li>
+					<li><a onclick="showCourse(this)" type="algorithms" href="#courseLinks">COSC 3327 - ALGORITHMS AND DATA STRUCTURES</a></li>
+					<li><a onclick="showCourse(this)" type="languages" href="#courseLinks">COSC 3336 - PROGRAMMING LANGUAGES</a></li>
 				</ul>
 			<h3>Spring 2019</h3>
 				<ul>
-					<li><a href="showCourse()">COSC 3326 - MOBILE PROGRAMMING</a></li>
-					<li><a href="showCourse()">COSC 3337 - DATABASE THEORY</a></li>
-					<li><a href="showCourse()">COSC 3339 - SOFTWARE ENGINEERING I</a></li>
-					<li><a href="showCourse()">COSC 3344 - COMPUTER NETWORKS</a></li>
+					<li><a onclick="showCourse(this)" type="mobile" href="#courseLinks"COSC 3326 - MOBILE PROGRAMMING</a></li>
+					<li><a onclick="showCourse(this)" type="database" href="#courseLinks">COSC 3337 - DATABASE THEORY</a></li>
+					<li><a onclick="showCourse(this)" type="swei" href="#courseLinks">COSC 3339 - SOFTWARE ENGINEERING I</a></li>
+					<li><a onclick="showCourse(this)" type="networks" href="#courseLinks">COSC 3344 - COMPUTER NETWORKS</a></li>
 				</ul>
 			<h3>Fall 2019</h3>
 				<ul>
-					<li><a href="showCourse()">COSC 4345 - SOFTWARE ENGINEERING II</a></li>
-					<li><a href="showCourse()">COSC 4333 - OPERATING SYSTEMS</a></li>
-					<li><a href="showCourse()">COSC 4257 - RESEARCH</a></li>
-					<li><a href="showCourse()">PHYS 2425 - PHYSICS</a></li>
+					<li><a onclick="showCourse(this)" type="sweii" href="#courseLinks">COSC 4345 - SOFTWARE ENGINEERING II</a></li>
+					<li><a onclick="showCourse(this)" type="os" href="#courseLinks">COSC 4333 - OPERATING SYSTEMS</a></li>
+					<li><a onclick="showCourse(this)" type="research" href="#courseLinks">COSC 4257 - RESEARCH</a></li>
+					<li><a onclick="showCourse(this)" type="physics" href="#courseLinks">PHYS 2425 - PHYSICS</a></li>
 				</ul>
+			<div id="toFill"></div>
 		</div>
-		<div class="coursesTaken">
+		<div class="coursesTaken" id="coursesTaken">
+			<h2>COURSES TAKEN</h2>
 			<table>
 				<tr>
 					<th>Course</th>
@@ -70,13 +77,29 @@
 					<td>Fall 2017</td>
 					<td>A</td>
 				</tr>
+				<tr>
+					<tf>Course</tf>
+					<tf>Semester Taken</tf>
+					<tf>Grade</tf>
+				</tr>
 			</table>
+		</div>
+		<div class="contact" id="contact">
+			<h2>CONTACT</h2>
+			<form>
+				<label for="fname">First Name*</label> <input type="text" class="form-control" id="fname" name="fname" placeholder="Please enter your first name*" required="required" data-error="Valid first name is required"> <br>
+				<label for="lname">Last Name*</label> <input type="text" class="form-control" id="lname" name="lname" placeholder="Please enter your last name*" required="required" data-error="Valid last name is required"> <br>
+				<label for="subject">Subject*</label> <input type="text" class="form-control" id="subject" name="subject" placeholder="Please enter your subject*" required="required" data-error="Valid subject is required"> <br>
+				<label for="email">Email*</label> <input type="email" class="form-control" id="email" name="email" placeholder="Please enter your email*" required="required" data-error="Valid email is required"> <br>
+				<label for="message">Message*</label> <textarea id="message" class="form-control" rows="4" placeholder="Message*" required="required" data-error="Leave a message"></textarea> <br>
+				<button onclick="sendData()" class="btn" value="Send message">Send message</button>
+			</form>
 		</div>
 	</main><!-- .content -->
 
 	<footer class="footer">
 		<address>
-			<a href="mailto:amandalewis66@gmail.com">Email Amanda Lewis</a>
+				© <a href="mailto:amandalewis66@gmail.com">Amanda Lewis</a>
 		</address>
 	</footer><!-- .footer -->
 
