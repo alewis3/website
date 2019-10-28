@@ -1,0 +1,188 @@
+
+body {
+	font: 15px/20px "Aileron", Arial, sans-serif;
+	height: 100%;
+}
+.wrapper {
+	min-width: 1000px;
+	max-width: 3000px;
+	margin: 0 auto;
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+}
+
+/* Fonts 
+-----------------------------------------------------------------------------*/
+@font-face {
+    font-family: Aileron;
+    src: url("aileron/Aileron-Regular.otf") format("opentype");
+}
+@font-face {
+    font-family: Aileron-Italic;
+    font-weight: italic;
+    src: url("aileron/Aileron-BlackItalic.otf") format("opentype");
+}
+@font-face {
+    font-family: Aileron-Bold;
+    font-weight: bold;
+    src: url("aileron/Aileron-Bold.otf") format("opentype");
+}
+@font-face {
+    font-family: Aileron-Heavy;
+    font-weight: heavy;
+    src: url("aileron/Aileron-Heavy.otf") format("opentype");
+}
+@font-face {
+    font-family: Aileron-Light;
+    font-weight: light;
+    src: url("aileron/Aileron-Light.otf") format("opentype");
+}
+
+
+/* Header
+-----------------------------------------------------------------------------*/
+.header {
+	height: fixed;
+	background: #F3E195;
+}
+.nav {
+	float: right;
+	border: 1px solid black;
+	padding: 3px;
+	background-color: #F3E195;
+	margin: 5px;
+	height: fixed;
+}
+.button {
+	border: none;
+	color: white;
+	padding: 20px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	border-radius: 8px;
+}
+.button1 {background: #EF959A;}
+.button2 {background: #6F3524;}
+.button3 {background: #F1C47A;}
+.button4 {background: #E8AF78;}
+img.center {
+	display: block;
+  	float: left;
+  	width: 50%;
+}
+img.photo {
+	height: 300px;
+	margin: 15%;
+}
+
+
+/* Middle
+-----------------------------------------------------------------------------*/
+.content {
+	padding: 0 0 150px;
+	display: block;
+	overflow: auto;
+}
+.floatleft {
+	display: block;
+	float: left;
+	width: 40%;
+}
+.floatright {
+	display: block;
+	float: right;
+	width: 50%;
+	overflow: auto;
+}
+.clear {
+	clear: both;
+}
+.courseLinks {
+	display: block;
+	float: left;
+	width: 100%;
+	background: #E8AF78;
+	padding: 20px;
+}
+.coursesTaken {
+	display: block;
+	float: left;
+	width: 100%;
+	background: #E8E8E8;
+	padding: 20px;
+}
+.coursesTaken table.display {
+	border-collapse: collapse;
+	margin:10px;
+    padding: 5px;
+}
+.coursesTaken table, th, td {
+	border: 1px solid black;
+	text-align: left;
+}
+.contact {
+	background: #E8AF78;
+	display: block;
+	float: left;
+	width: 100%;
+	padding: 20px
+}
+#topBtn {
+	display: none; /* Hidden by default */
+	position: fixed; /* Fixed/sticky position */
+	bottom: 20px; /* Place the button at the bottom of the page */
+	right: 30px; /* Place the button 30px from the right */
+	z-index: 99; /* Make sure it does not overlap */
+	border: none; /* Remove borders */
+	outline: none; /* Remove outline */
+	background-color: #F3E195; /* Set a background color */
+	color: black; /* Text color */
+	cursor: pointer; /* Add a mouse pointer on hover */
+	padding: 15px; /* Some padding */
+	border-radius: 10px; /* Rounded corners */
+	font-size: 18px; /* Increase font size */
+  }
+  
+  #topBtn:hover {
+	background-color: #555; /* Add a dark-grey background on hover */
+  }
+  label {
+	display: block;
+	width: 140px;
+	text-align: left;
+  }​
+  .form-control {
+	  display: block;
+	  float: left;
+	  width: 300px;
+	  border: 2px;
+	  border-color: black;
+  }
+  .form-control::after {
+	  clear: both;
+  }
+  button, input, select, textarea {
+	font-family : inherit;
+	font-size   : 100%;
+	width : 300px;
+  	margin: 0;
+  	box-sizing: border-box;
+  }
+
+
+
+
+/* Footer
+-----------------------------------------------------------------------------*/
+.footer {
+	margin: -150px auto 0;
+	min-width: 1000px;
+	max-width: 3000px;
+	height: 150px;
+	background: #EF959A;
+	position: relative;
+}

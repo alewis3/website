@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="COSC2329">
+    <meta name="author" content="Amanda Lewis">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
+    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script> 
+    <link rel="stylesheet" href="/css/homeTheme.css" type="text/css" />
+    <link rel="stylesheet" href="./css/form.css" type="text/css" />
+    <script type="text/javascript" src="./js/updateDelete.js"></script>
+
+    <title> Restaurant Update </title>
+
+</head>
+
+<body>
+    
+    <div class="nav">
+            <div class="floatleft">
+                <h2>Amanda Lewis & Samita Damani</h2>
+                <p>Database Project - Restaurant Update</p>
+            </div>
+            <div class="floatright">
+                <button type="button" class="button" id="button1" onclick="location.href='./insert.html';">Restaurant Insert</button>
+                <button type="button" class="button" id="button2" onclick="location.href='./select.html';">Restaurant Select</button>
+                <button type="button" class="button" id="button3" onclick="location.href='./update.html';">Restaurant Update</button>
+            </div>
+        <div class='clear'></div>
+     </div>
+    <div class='content'>
+        <div class='floatleft'>
+        <div class="form">
+                <form id="customerUpdateForm">
+                    <fieldset>
+                        <legend> Update Customer Information: </legend>
+                        Enter old name: <input type="text" id="customerOldName"><br>
+                        Enter new name: <input type="text" id="customerNewName"><br>
+                        <input type="submit" value="Update Information" onclick="customerUpdate()"> <br>
+                        <p id="customerUpdateConfirm"> </p>
+                    </fieldset>
+                </form>
+            </div> <!-- close customer form -->
+            <div class="form">
+                <form id="reservationUpdateForm">
+                    <fieldset>
+                        <legend> Update Reservation Party Size</legend>
+                        Enter party name: <input type="text" id="partyNameUpdateRes"> <br>
+                        Enter customer's name: <input type="text" id="custNameUpdateRes"> <br>
+                        Enter new party size: (1-12) <input type="text" id="partySizeUpdateRes" value="0"><br>
+                        <input type="submit" value="Update Reservation" onclick="reservationUpdate()">
+                        <p id="reservationUpdateConfirm"></p>
+                    </fieldset>
+                </form>
+            </div> <!-- close reservation form -->
+            </div> <!-- close float left -->
+            <div class="floatright">
+                <div class="form">
+                    <form id="customerDeleteForm">
+                        <fieldset>
+                            <legend> Delete Customer Records: </legend>
+                            Enter customer name: <input type="text" id="customerDeleteName"><br>
+                            <input type="submit" value="Delete me!" onclick="customerDelete()"> <br>
+                            <p id="customerDeleteConfirm"> </p>
+                        </fieldset>
+                    </form>
+                </div> <!-- close customer form -->
+                <div class="form">
+                <form id="reservationUpdateForm">
+                    <fieldset>
+                        <legend> Cancel a Reservation</legend>
+                        Enter party name: <input type="text" id="partyNameDeleteRes"> <br>
+                        Enter customer's name <input type="text" id="custNameDeleteRes"><br>
+                        <input type="submit" value="Cancel Reservation" onclick="reservationDelete()">
+                        <p id="reservationDeleteConfirm"></p>
+                    </fieldset>
+                </form>
+            </div> <!-- close reservation form -->
+            </div>
+        <div class="clear"></div>
+    </div> <!-- end of content -->
+    <div class="footer">
+        <h5>Contact: </h5>
+        <p>alewis3@stedwards.edu or sdamani2@stedwards.edu</p>
+    </div>
+</body>
