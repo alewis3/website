@@ -5,28 +5,28 @@ window.onload = function() {
   function handleForm(event) { event.preventDefault(); }
   form.addEventListener('submit', handleForm);
 
-  var table = document.getElementById("table");
-  table.innerHTML = "<tr><th>Course Number</th><th>Course Name</th><th>Semester Taken</th><th>Grade</th></tr>";
+  // var table = document.getElementById("table");
+  // table.innerHTML = "<tr><th>Course Number</th><th>Course Name</th><th>Semester Taken</th><th>Grade</th></tr>";
 
-  const Http = new XMLHttpRequest();
-  const url='http://localhost:4001/courses';
-  Http.open("GET", url, true);
-  Http.send();
+  // const Http = new XMLHttpRequest();
+  // const url='http://localhost:4001/courses';
+  // Http.open("GET", url, true);
+  // Http.send();
 
-  Http.onreadystatechange = function() {
-    if(this.readyState==4 && this.status==200) {
-      const jsonBody = Http.responseText;
-      var jsonObj = JSON.parse(jsonBody);
-      for (var i = 0; i < jsonObj.length; i++) {
-        var course = jsonObj[i];
-         const courseNum = course.courseNumber;
-        const courseName = course.courseName;
-        const semester = course.semesterTaken;
-        const grade = course.grade;
-        table.innerHTML += "<tr><td>" + courseNum + "</td><td>" + courseName + "</td><td>" + semester + "</td><td>" + grade + "</td></tr>";
-      }
-    }
-  }
+  // Http.onreadystatechange = function() {
+  //   if(this.readyState==4 && this.status==200) {
+  //     const jsonBody = Http.responseText;
+  //     var jsonObj = JSON.parse(jsonBody);
+  //     for (var i = 0; i < jsonObj.length; i++) {
+  //       var course = jsonObj[i];
+  //        const courseNum = course.courseNumber;
+  //       const courseName = course.courseName;
+  //       const semester = course.semesterTaken;
+  //       const grade = course.grade;
+  //       table.innerHTML += "<tr><td>" + courseNum + "</td><td>" + courseName + "</td><td>" + semester + "</td><td>" + grade + "</td></tr>";
+  //     }ç
+  //   }
+  // }
 }
 
 

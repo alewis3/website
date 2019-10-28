@@ -7,18 +7,13 @@
 	<link rel="shortcut icon" href="images/profile.png" />
 	<meta name="keywords" content="" />
 	<meta name="description" content="" />
-	<link href="style.css" rel="stylesheet">
-	<script type="text/javascript" src="execute.js"></script>
+	<link href="/style.css" rel="stylesheet">
+	<script type="text/javascript" src="/execute.js"></script>
 	<link rel='stylesheet' type='text/css' href='http://cdn.datatables.net/1.10.4/css/jquery.dataTables.css'>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 	<link rel='stylesheet' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
 	<script src='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js'></script>
 	<script src='http://cdn.datatables.net/1.10.4/js/jquery.dataTables.min.js'></script>
-	<script>
-		$(document).ready(function() {
-  			$('#table').DataTable();
-		});
-	</script>
 </head>
 
 <body>
@@ -27,19 +22,19 @@
 
 	<button onclick="topFunction()" id="topBtn" title="Go to top">Top</button>
 	<header class="header">
-		<img class="center" src="images/cover.png" alt="Amanda Lewis Cover">
+		<img class="center" src="./images/cover.png" alt="Amanda Lewis Cover">
 		<div class="nav">
 			<button class="button button1" value="aboutMe" onclick="transport(this)">ABOUT ME</button><br>
 			<button class="button button2" value="courseLinks" onclick="transport(this)">COURSE LINKS</button><br>
-			<button class="button button3" value="coursesTaken" onclick="transport(this)">COURSES TAKEN</button><br>
-			<button class="button button4" value="contact" onclick="transport(this)">CONTACT</button><br>
+			<!-- <button class="button button3" value="coursesTaken" onclick="transport(this)">COURSES TAKEN</button><br> -->
+			<button class="button button3" value="contact" onclick="transport(this)">CONTACT</button><br>
 		</div>
 		<div class="clear"></div>
 	</header><!-- .header-->
 
 	<main class="content">
 		<div class="floatleft" id="aboutMe">
-			<img class="photo" src="images/linkedin.jpg" alt="Amanda Lewis">
+			<img class="photo" src="./images/linkedin.jpg" alt="Amanda Lewis">
 		</div>
 		<div class="floatright">
 			<h2>A Little About Amanda: </h2>
@@ -79,11 +74,11 @@
 				</ul>
 			<div id="toFill"></div>
 		</div>
-		<div class="coursesTaken" id="coursesTaken">
+		<!-- <div class="coursesTaken" id="coursesTaken">
 			<h2>COURSES TAKEN</h2>
 			<table id="table" class='display' cellspacing='1' width='90%'>
 			</table>
-		</div>
+		</div> -->
 		<div class="contact" id="contact">
 			<h2>CONTACT</h2>
 			<form id="contactForm">
@@ -92,15 +87,15 @@
 				<label for="subject">Subject*</label> <input type="text" class="form-control" id="subject" name="subject" placeholder="Please enter your subject*" required="required" data-error="Valid subject is required"> <br>
 				<label for="email">Email*</label> <input type="email" class="form-control" id="email" name="email" placeholder="Please enter your email*" required="required" data-error="Valid email is required"> <br>
 				<label for="message">Message*</label> <textarea id="message" class="form-control" rows="4" placeholder="Message*" required="required" data-error="Leave a message"></textarea> <br>
-				<button onclick="sendData()" class="btn" value="Send message">Send message</button>
+				<button onclick="sendData()" class="btn button3" value="Send message">Send message</button>
 			</form>
 		</div>
 	</main><!-- .content -->
 
 	<footer class="footer">
-		<address>
-				© <a href="mailto:amandalewis66@gmail.com">Amanda Lewis</a>
-		</address>
+		<p>
+				© Copyright Amanda Lewis
+		</p>
 	</footer><!-- .footer -->
 
 </div><!-- .wrapper -->

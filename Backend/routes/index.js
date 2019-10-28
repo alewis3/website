@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+var path = require("path");
 // Use at least Nodemailer v4.1.0
 const nodemailer = require('nodemailer');
 let mongoose = require('mongoose');
@@ -8,7 +9,23 @@ let Course = mongoose.model('Course');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.sendFile(path.join(__dirname + '/../files/index.html'));
+});
+
+router.get('/style.css', function(req, res, next) {
+  res.sendFile(path.join(__dirname + '/../files/style.css'));
+});
+
+router.get('/execute.js', function(req, res, next) {
+  res.sendFile(path.join(__dirname + '/../files/execute.js'));
+});
+
+router.get('/images/cover.png', function(req, res, next) {
+  res.sendFile(path.join(__dirname + '/../files/images/cover.png'));
+});
+
+router.get('/images/linkedin.jpg', function(req, res, next) {
+  res.sendFile(path.join(__dirname + '/../files/images/linkedin.jpg'));
 });
 
 router.options('/sendEmail', function (req, res, next) {
