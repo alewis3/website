@@ -9,6 +9,16 @@
 	<meta name="description" content="" />
 	<link href="style.css" rel="stylesheet">
 	<script type="text/javascript" src="execute.js"></script>
+	<link rel='stylesheet' type='text/css' href='http://cdn.datatables.net/1.10.4/css/jquery.dataTables.css'>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<link rel='stylesheet' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+	<script src='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js'></script>
+	<script src='http://cdn.datatables.net/1.10.4/js/jquery.dataTables.min.js'></script>
+	<script>
+		$(document).ready(function() {
+  			$('#table').DataTable();
+		});
+	</script>
 </head>
 
 <body>
@@ -19,20 +29,25 @@
 	<header class="header">
 		<img class="center" src="images/cover.png" alt="Amanda Lewis Cover">
 		<div class="nav">
-			<a href="#" onclick="transport(this)" type="aboutMe">ABOUT ME</a>
-			<a href="#" onclick="transport(this)" type="courseLinks">COURSE LINKS</a>
-			<a href="#" onclick="transport(this)" type="coursesTaken">COURSES TAKEN</a>
-			<a href="#" onclick="transport(this)" type="contact">CONTACT</a>
+			<button class="button button1" value="aboutMe" onclick="transport(this)">ABOUT ME</button><br>
+			<button class="button button2" value="courseLinks" onclick="transport(this)">COURSE LINKS</button><br>
+			<button class="button button3" value="coursesTaken" onclick="transport(this)">COURSES TAKEN</button><br>
+			<button class="button button4" value="contact" onclick="transport(this)">CONTACT</button><br>
 		</div>
+		<div class="clear"></div>
 	</header><!-- .header-->
 
 	<main class="content">
 		<div class="floatleft" id="aboutMe">
-			<img class="center" src="images/linkedin.jpg" alt="Amanda Lewis">
+			<img class="photo" src="images/linkedin.jpg" alt="Amanda Lewis">
 		</div>
 		<div class="floatright">
 			<h2>A Little About Amanda: </h2>
 			<p>Amanda Lewis is a Senior Computer Science major at St. Edward's University who interned over the past summer at Modernize on a scrum team of about 10. She worked on tickets ranging from bugs to new features. Currently she is working on her Senior Project and her Software Engineering II project. She is interested in developing complex systems and learning more about backend frameworks like python and node.js express API apps.</p>
+			<button class="button button1" value="Resume" onclick="location.href='./assets/Resume.pdf';">RESUME</button>
+			<button class="button button2" value="Github" onclick="location.href='https://github.com/alewis3'">GITHUB</button>
+			<button class="button button3" value="LinkedIn" onclick="location.href='https://www.linkedin.com/in/amanda-lewis-seu/'">LinkedIn</button>
+
 		</div>
 		<div class="clear"></div>
 		<div class="courseLinks" id="courseLinks">
@@ -66,27 +81,12 @@
 		</div>
 		<div class="coursesTaken" id="coursesTaken">
 			<h2>COURSES TAKEN</h2>
-			<table>
-				<tr>
-					<th>Course</th>
-					<th>Semester Taken</th>
-					<th>Grade</th>
-				</tr>
-				<tr>
-					<td>COSC 2425 - Concepts II</td>
-					<td>Fall 2017</td>
-					<td>A</td>
-				</tr>
-				<tr>
-					<tf>Course</tf>
-					<tf>Semester Taken</tf>
-					<tf>Grade</tf>
-				</tr>
+			<table id="table" class='display' cellspacing='1' width='90%'>
 			</table>
 		</div>
 		<div class="contact" id="contact">
 			<h2>CONTACT</h2>
-			<form>
+			<form id="contactForm">
 				<label for="fname">First Name*</label> <input type="text" class="form-control" id="fname" name="fname" placeholder="Please enter your first name*" required="required" data-error="Valid first name is required"> <br>
 				<label for="lname">Last Name*</label> <input type="text" class="form-control" id="lname" name="lname" placeholder="Please enter your last name*" required="required" data-error="Valid last name is required"> <br>
 				<label for="subject">Subject*</label> <input type="text" class="form-control" id="subject" name="subject" placeholder="Please enter your subject*" required="required" data-error="Valid subject is required"> <br>

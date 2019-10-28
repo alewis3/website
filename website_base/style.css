@@ -1,6 +1,6 @@
 
 body {
-	font: 12px/18px "Aileron", Arial, sans-serif;
+	font: 15px/20px "Aileron", Arial, sans-serif;
 	height: 100%;
 }
 .wrapper {
@@ -45,13 +45,38 @@ body {
 .header {
 	height: fixed;
 	background: #F3E195;
-	align-content: center;
 }
+.nav {
+	float: right;
+	border: 1px solid black;
+	padding: 3px;
+	background-color: #F3E195;
+	margin: 5px;
+	height: fixed;
+}
+.button {
+	border: none;
+	color: white;
+	padding: 20px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	border-radius: 8px;
+}
+.button1 {background: #EF959A;}
+.button2 {background: #6F3524;}
+.button3 {background: #F1C47A;}
+.button4 {background: #E8AF78;}
 img.center {
 	display: block;
-  	margin-left: auto;
-  	margin-right: auto;
+  	float: left;
   	width: 50%;
+}
+img.photo {
+	height: 300px;
+	margin: 15%;
 }
 
 
@@ -65,12 +90,12 @@ img.center {
 .floatleft {
 	display: block;
 	float: left;
-	width: 45%;
+	width: 40%;
 }
 .floatright {
 	display: block;
 	float: right;
-	width: 45%;
+	width: 50%;
 	overflow: auto;
 }
 .clear {
@@ -90,10 +115,11 @@ img.center {
 	background: #E8E8E8;
 	padding: 20px;
 }
-.coursesTaken table {
+.coursesTaken table.display {
 	border-collapse: collapse;
-  }
-  
+	margin:10px;
+    padding: 5px;
+}
 .coursesTaken table, th, td {
 	border: 1px solid black;
 	text-align: left;
@@ -113,7 +139,7 @@ img.center {
 	z-index: 99; /* Make sure it does not overlap */
 	border: none; /* Remove borders */
 	outline: none; /* Remove outline */
-	background-color: yellow; /* Set a background color */
+	background-color: #F3E195; /* Set a background color */
 	color: black; /* Text color */
 	cursor: pointer; /* Add a mouse pointer on hover */
 	padding: 15px; /* Some padding */

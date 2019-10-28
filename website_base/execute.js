@@ -1,12 +1,47 @@
+
+window.onload = function() {
+
+  var form = document.getElementById("contactForm"); 
+  function handleForm(event) { event.preventDefault(); }
+  form.addEventListener('submit', handleForm);
+
+  var table = document.getElementById("table");
+  table.innerHTML = "<tr><th>Course Number</th><th>Course Name</th><th>Semester Taken</th><th>Grade</th></tr>";
+
+  const Http = new XMLHttpRequest();
+  const url='http://localhost:4001/courses';
+  Http.open("GET", url, true);
+  Http.send();
+
+  Http.onreadystatechange = function() {
+    if(this.readyState==4 && this.status==200) {
+      const jsonBody = Http.responseText;
+      var jsonObj = JSON.parse(jsonBody);
+      for (var i = 0; i < jsonObj.length; i++) {
+        var course = jsonObj[i];
+         const courseNum = course.courseNumber;
+        const courseName = course.courseName;
+        const semester = course.semesterTaken;
+        const grade = course.grade;
+        table.innerHTML += "<tr><td>" + courseNum + "</td><td>" + courseName + "</td><td>" + semester + "</td><td>" + grade + "</td></tr>";
+      }
+    }
+  }
+}
+
+
+
 //Get the button:
-mybutton = document.getElementById("topBtn");
 
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function() {scrollFunction()};
 
-var arrayOfTypes = ["component", "arch", "security", "algorithms", "languages", "mobile", "database", "swei", "networks", "sweii", "os", "research", "physics"];
+window.onbeforeunload = function() {
+  return "Do you want to reload the page";
+};
 
 function scrollFunction() {
+  mybutton = document.getElementById("topBtn");
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
     mybutton.style.display = "block";
   } else {
@@ -70,7 +105,29 @@ function showCourse(tagObject) {
 }
 
 function transport(tagObject) {
-  tagType = tagObject.type;
+  var tagType = tagObject.value;
   var elmnt = document.getElementById(tagType);
-  elmnt.scrollIntoView;
+  elmnt.scrollIntoView({behavior: "smooth"});
+}
+
+function sendData() {
+  var fname = document.getElementById('fname').value;
+  var lname = document.getElementById('lname').value;
+  var email = document.getElementById('email').value;
+  var subject = document.getElementById('subject').value;
+  var message = document.getElementById('message').value;
+  console.log(fname + " " + lname + " at email address " + email + " with subject " + subject + " is sending message " + message)
+
+  const Http = new XMLHttpRequest();
+  const url='http://localhost:4001/sendEmail';
+  Http.open("POST", url, true);
+  Http.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+  Http.setRequestHeader("Accept", "application/json;charset=UTF-8");
+  Http.send(JSON.stringify({"fname": fname, "lname": lname, "email": email, "subject": subject, "message": message}));
+
+  Http.onreadystatechange = function() {
+    if(this.readyState==4 && this.status==200) {
+      console.log(Http.responseText);
+    }
+  }
 }
