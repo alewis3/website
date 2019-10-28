@@ -8,14 +8,14 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 var mongoose = require('mongoose');
-//var autoIncrement = require('mongoose-auto-increment');
+// //var autoIncrement = require('mongoose-auto-increment');
 
-var connection = mongoose.connect('mongodb://localhost:27017/courses', {useNewUrlParser: true, useUnifiedTopology: true }, function (error) {
+// var connection = mongoose.connect('mongodb://localhost:27017/courses', {useNewUrlParser: true, useUnifiedTopology: true }, function (error) {
 
-  if (error) console.log(error);
-  else
-    console.log(" **** DB connection successful ****");
-});
+//   if (error) console.log(error);
+//   else
+//     console.log(" **** DB connection successful ****");
+// });
 
 var app = express();
 
