@@ -12,21 +12,16 @@ router.get('/', function(req, res, next) {
   res.sendFile(path.join(__dirname + '/../files/index.html'));
 });
 
-router.get('/style.css', function(req, res, next) {
-  res.sendFile(path.join(__dirname + '/../files/style.css'));
+router.get('/:file', function(req, res, next) {
+  var file = req.params.file;
+  res.status(200).sendFile(path.join(__dirname + '/../files/' + file));
 });
 
-router.get('/execute.js', function(req, res, next) {
-  res.sendFile(path.join(__dirname + '/../files/execute.js'));
-});
-
-router.get('/images/cover.png', function(req, res, next) {
-  res.sendFile(path.join(__dirname + '/../files/images/cover.png'));
-});
-
-router.get('/images/linkedin.jpg', function(req, res, next) {
-  res.sendFile(path.join(__dirname + '/../files/images/linkedin.jpg'));
-});
+router.get('/:filepath/:file', function(req, res, next) {
+  var filepath = req.params.filepath;
+  var file = req.params.file;
+  res.status(200).sendFile(path.join(__dirname, '/../files/', filepath, '/', file));
+})
 
 router.options('/sendEmail', function (req, res, next) {
   res.setHeader("Access-Control-Allow-Origin", "*");
@@ -41,7 +36,7 @@ router.post('/sendEmail', function(req, res, next) {
   res.setHeader('Access-Control-Allow-Origin', '*');
 
   console.log(req.body);
-  testmail(req.body.fname, req.body.lname, req.body.email, req.body.subject, req.body.message);
+  mail(req.body.fname, req.body.lname, req.body.email, req.body.subject, req.body.message);
   res.status(200).send(req.body);
 });
 
@@ -71,6 +66,33 @@ router.post('/insertCourse', function(req, res, next) {
     }
   });
 })
+
+function mail(fname, lname, email, subject, msg) {
+
+  // Create a SMTP transporter object
+  var transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+           user: 'tricklewis66@gmail.com',
+           pass: process.env.GMAIL_PWD
+       }
+   });
+
+  // Message object
+  let message = {
+      from: fname + ' ' + lname + ' <' + email + '>',
+      to: 'Amanda Lewis <amandalewis66@gmail.com>',
+      subject: subject,
+      html: '<p>' + msg + '</p>'
+  };
+
+  transporter.sendMail(message, (err, info) => {
+    if(err)
+      console.log(err);
+    else
+      console.log(info);
+  });
+}
 
 function testmail(fname, lname, email, subject, msg) {
 
