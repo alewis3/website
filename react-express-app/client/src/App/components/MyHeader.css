@@ -1,0 +1,12 @@
+.header-div {
+    background: #F3E195;
+    text-align: center;
+    width: 100%;
+}
+
+img.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}

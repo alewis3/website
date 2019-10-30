@@ -1,0 +1,10 @@
+div.project-section {
+    display: inline-table;
+    display: flex; 
+    justify-content: space-around;
+    width: 100%;
+    background: #E8AF78;
+}
+div.row {
+    display: table-row;
+}
