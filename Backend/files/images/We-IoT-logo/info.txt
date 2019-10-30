@@ -1,0 +1,14 @@
+
+Hope you enjoy your new logo, here are the people that
+made your beautiful logo happen :)
+font name: clarikageo-medium
+font link: https://www.fontspring.com/fonts/the-refinery/clarika/clarika-geometric-medium
+font author: The Refinery
+font author site: https://www.refinerybrand.com/
+Slogan Font: Fanwood Text.otf
+
+icon designer: Krisztián Mátyás
+icon designer link: /krisztian21
+        
+{"bg":"#581C2F","icon":"#D44553","font":"#FFFFFF","slogan":"#ffffff"}
+      
