@@ -26,7 +26,7 @@ router.post('/sendEmail', function(req, res, next) {
 
 router.get('/getCourses', async function(req, res, next) {
 
-  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Origin', 'https://amandalewisdev.com/');
 
   var query = await Course.find({}).lean().sort({courseNumber: 1}).exec();
   res.status(200).send({query});
