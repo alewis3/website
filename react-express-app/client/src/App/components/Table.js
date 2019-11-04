@@ -11,7 +11,7 @@ class Table extends Component {
 
     componentDidMount = () => {
         let comp = this;
-        axios.get('amandalewisdev.com/api/getCourses').then(function(response) {
+        axios.get('https://amandalewisdev.com/api/getCourses').then(function(response) {
             if (response.status === 200) {
                comp.setState({data: response.data.query});
             } else {
