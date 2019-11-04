@@ -1,0 +1,20 @@
+img.logo {
+    width: 22vw;
+    height: auto;
+}
+
+.project-bio {
+    padding: 5px;
+}
+
+p.desc {
+    font-size: 20px;
+}
+
+div.project {
+    border: 2px solid #6F3524;
+    margin: 10px 0px;
+    width: 22vw;
+    background: white;
+    display: inline-block;
+}

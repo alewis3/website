@@ -1,0 +1,14 @@
+div.projects div.project-section {
+    display: inline-table;
+    display: inline-flex; 
+    justify-content: space-evenly;
+    width: 100%;
+}
+div.projects {
+    padding: 2px;
+    display: block;
+    color: #6F3524;
+    background: #e8af78;
+    border-bottom: 3px solid #6F3524;
+    border-top: 3px solid #6F3524;
+}

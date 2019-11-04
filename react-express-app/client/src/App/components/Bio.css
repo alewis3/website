@@ -1,0 +1,30 @@
+.about {
+    display: block;
+	float: right;
+	width: 50%;
+}
+
+img.image {
+    display: block;
+	float: left;
+	width: 50%;
+}
+
+div.bio {
+    display: inline-block;
+    padding: 5px;
+    color: #6F3524;
+    background: white;
+    border-top: 3px solid #6F3524;
+}
+
+p.bio {
+    padding: 5%;
+    margin: 5px;
+    font-size: 20px;
+
+}
+
+.clear {
+    clear: both;
+}
