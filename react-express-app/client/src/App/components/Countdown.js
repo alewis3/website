@@ -66,7 +66,7 @@ class CountdownItem extends Component {
                 <path
                     fill="none"
                     stroke="#6F3524"
-                    stroke-width="4"
+                    strokeWidth="4"
                     d={describeArc(50, 50, 48, 0, radius)}
                 />
             </svg>

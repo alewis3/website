@@ -1,7 +1,7 @@
 div.projects div.project-section {
     display: inline-table;
-    display: flex; 
-    justify-content: space-around;
+    display: inline-flex; 
+    justify-content: space-evenly;
     width: 100%;
 }
 div.projects {
@@ -10,7 +10,4 @@ div.projects {
     color: #6F3524;
     background: #E8AF78;
 
-}
-div.row {
-    display: table-row;
 }

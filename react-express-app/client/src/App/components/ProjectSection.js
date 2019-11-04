@@ -13,10 +13,10 @@ class ProjectSection extends Component {
             <div className="projects">
                 <h1>Projects and Internships</h1>
                 <div className="project-section">
-                    <Project title="SWE II We-IoT Project" description={IoTBio} src="./public/We-IoT.png" alt="We-IoT Logo"/>
-                    <Project title="Java Multithreading Vehicle Simulator Project" description={JVMTBio} src="./public/java.jpg" alt="Java Logo"/>
-                    <Project title="Software Engineering Internship" description={ModBio} src="./public/mod_logo.png" alt="Modernize Logo"/>
-                    <Project title="SWE I We-Go Project" description={GoBio} src="./public/We-Go.png" alt="We-Go Logo"/>
+                    <Project title="SWE II We-IoT Project" description={IoTBio} src="/We-IoT.png" alt="We-IoT Logo"/>
+                    <Project title="Java Multithreading Vehicle Simulator Project" description={JVMTBio} src="/java.jpg" alt="Java Logo"/>
+                    <Project title="Software Engineering Internship" description={ModBio} src="/mod_logo.png" alt="Modernize Logo"/>
+                    <Project title="SWE I We-Go Project" description={GoBio} src="/We-Go.png" alt="We-Go Logo"/>
                 </div>
             </div>
         )
