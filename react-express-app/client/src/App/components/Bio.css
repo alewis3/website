@@ -15,6 +15,7 @@ div.bio {
     padding: 5px;
     color: #6F3524;
     background: white;
+    border-top: 3px solid #6F3524;
 }
 
 p.bio {

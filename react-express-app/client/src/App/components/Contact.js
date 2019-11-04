@@ -45,48 +45,49 @@ class Contact extends Component {
     submitButton(event) {
         var self = this;
     
-        console.log("values", this.state.first, 
-                                this.state.last, 
+        console.log("values", this.state.fname, 
+                                this.state.lname, 
                                 this.state.email, 
                                 this.state.subject, 
                                 this.state.msg);
         
-        if (this.state.first === "" || 
-            this.state.last === "" || 
-            this.state.email === "" || 
-            this.state.subject === "" || 
-            this.state.msg === "") {
+        if (this.state.fname == "" || 
+            this.state.lname == "" || 
+            this.state.email == "" || 
+            this.state.subject == "" || 
+            this.state.msg == "") {
             alert("Fill in all fields!");
             console.log("Missing fields");
         }
-    
-        // trim fields whitespace
-        let firstNameTrimmed = this.state.first.trim();
-        let lastNameTrimmed = this.state.last.trim();
-        let emailTrimmed = this.state.email.trim();
-        let subjectTrimmed = this.state.subject.trim();
-        let msgTrimmed = this.state.msg.trim();
-    
-        var payload = {
-            "first": firstNameTrimmed,
-            "last": lastNameTrimmed,
-            "email": emailTrimmed,
-            "subject": subjectTrimmed,
-            "msg": msgTrimmed
-        }
-    
-        axios.post('/sendEmail', payload).then(function(response) {
-            console.log(response);
-            if (response.status == 200) {
-                console.log("Test email sent!");
-                alert("Test email sent!")
-            } else if (response.status == 401) {
-                console.log("Test email could not be sent!");
-                alert("Test email could not be sent!");
+        else {
+            // trim fields whitespace
+            let firstNameTrimmed = this.state.fname.trim();
+            let lastNameTrimmed = this.state.lname.trim();
+            let emailTrimmed = this.state.email.trim();
+            let subjectTrimmed = this.state.subject.trim();
+            let msgTrimmed = this.state.msg.trim();
+        
+            var payload = {
+                "first": firstNameTrimmed,
+                "last": lastNameTrimmed,
+                "email": emailTrimmed,
+                "subject": subjectTrimmed,
+                "msg": msgTrimmed
             }
-        }).catch(function (error) {
-            console.log(error);
-        });
+        
+            axios.post('/sendEmail', payload).then(function(response) {
+                console.log(response);
+                if (response.status === 200) {
+                    console.log("Test email sent!");
+                    alert("Test email sent!")
+                } else if (response.status === 401) {
+                    console.log("Test email could not be sent!");
+                    alert("Test email could not be sent!");
+                }
+            }).catch(function (error) {
+                console.log(error);
+            });
+        }
     }
     render() {
         const style = {

@@ -10,6 +10,9 @@ table, th, td {
     color: #672e23;
 }
 
+div.tableDiv {
+    border-bottom: 3px solid #6F3524;
+}
 
 h1 {
     color: #672e23;

@@ -20,7 +20,7 @@ router.post('/sendEmail', function(req, res, next) {
   res.setHeader('Access-Control-Allow-Origin', '*');
 
   console.log(req.body);
-  testmail(req.body.fname, req.body.lname, req.body.email, req.body.subject, req.body.message);
+  testmail(req.body.first, req.body.last, req.body.email, req.body.subject, req.body.msg);
   res.status(200).send(req.body);
 });
 
@@ -105,7 +105,7 @@ function testmail(fname, lname, email, subject, msg) {
           from: fname + ' ' + lname + ' <' + email + '>',
           to: 'Amanda Lewis <amandalewis66@gmail.com>',
           subject: subject,
-          text: "Hey",
+          text: msg,
           html: '<p>' + msg + '</p>'
       };
 
