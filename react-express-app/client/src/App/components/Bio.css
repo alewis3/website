@@ -11,13 +11,17 @@ img.image {
 }
 
 div.bio {
+    display: inline-block;
     padding: 5px;
+    color: #6F3524;
+    background: white;
 }
 
 p.bio {
     padding: 5%;
     margin: 5px;
     font-size: 20px;
+
 }
 
 .clear {

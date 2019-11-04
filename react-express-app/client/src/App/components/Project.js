@@ -10,7 +10,7 @@ class Project extends Component {
         const TitleAndDescription = () => {
             return (
                 <div className="project-bio">
-                    <h2>{this.props.title}</h2>
+                    <h2 className="title">{this.props.title}</h2>
                     <p className="desc">{this.props.description}</p>
                 </div>
             );

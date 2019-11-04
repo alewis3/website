@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './Bio.css';
 
+import Countdown from './Countdown';
+
 class Bio extends Component {
 
     render() {
@@ -17,10 +19,13 @@ class Bio extends Component {
             <div className="bio">
                 <Photo/>
                 <About/>
+                <Countdown timeTillDate="05 09 2020 00:00:00" timeFormat="MM DD YYYY hh:mm:ss"/>
             </div>
         )
         return <Bio/>;
     }
 }
+
+
 
 export default Bio;
