@@ -1,6 +1,7 @@
 .button-row {
-    display: table;
     width: 100%;
-    table-layout: fixed;
     background: #F3E195;
+    display: inline-table;
+    display: inline-flex; 
+    justify-content: space-evenly;
 }
