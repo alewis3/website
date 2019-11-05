@@ -1,6 +1,7 @@
 img.logo {
     width: 22vw;
-    height: auto;
+    height: 289px;
+    border-bottom: 3px solid #6F3524;
 }
 
 .project-bio {
