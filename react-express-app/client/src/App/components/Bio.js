@@ -19,7 +19,7 @@ class Bio extends Component {
             <div className="bio">
                 <Photo/>
                 <About/>
-                <Countdown timeTillDate="05 09 2020 00:00:00" timeFormat="MM DD YYYY hh:mm:ss"/>
+                <Countdown timeTillDate="05 08 2020 12:00:00" timeFormat="MM DD YYYY hh:mm:ss"/>
             </div>
         )
         return <Bio/>;
