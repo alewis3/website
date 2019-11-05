@@ -13,6 +13,9 @@ const courseSchema = new Schema({
     semesterTaken: {
         type: String
     },
+    semesterInt: {
+        type: Number
+    },
     grade: {
         type: String
     }
