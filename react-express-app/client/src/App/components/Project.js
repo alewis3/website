@@ -11,7 +11,7 @@ class Project extends Component {
             return (
                 <div className="project-bio">
                     <h2 className="title">{this.props.title}</h2>
-                    <p className="desc">{this.props.description}</p>
+                    <p className="desc" dangerouslySetInnerHTML={this.props.description}></p>
                 </div>
             );
         };

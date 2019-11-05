@@ -8,7 +8,14 @@ img.logo {
 }
 
 p.desc {
-    font-size: 20px;
+    font-size: 16px;
+}
+
+p.desc a {
+    color: #6F3524;
+}
+p.desc a:hover {
+    color: black;
 }
 
 div.project {

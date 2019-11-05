@@ -5,6 +5,7 @@ import Bio from './../components/Bio';
 import ProjectSection from './../components/ProjectSection';
 import Table from './../components/Table'; 
 import Contact from './../components/Contact';
+import Footer from './../components/Footer';
 
 class Home extends Component {
   render() {
@@ -16,6 +17,7 @@ class Home extends Component {
       <ProjectSection/>
       <Table/>
       <Contact/>
+      <Footer/>
     </div>
     );
   }
