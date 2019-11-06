@@ -1,0 +1,23 @@
+.header-div {
+    background: #F3E195;
+    text-align: center;
+    align-content: center;
+    width: 100%;
+    color: #6F3524;
+    height: 40vh;
+}
+
+img.header-img {
+    display: block;
+    float: left;
+    height: 40vh;
+    left: 20px;
+    margin: 0px 0px 0px 200px;
+}
+
+.header-text {
+    justify-content: center;
+    align-content: center;
+    padding: 2em;
+    margin: 0px 100px 0px 0px;
+}

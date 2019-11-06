@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Contact.css';
+import './CSS/Contact.css';
 import axios from 'axios';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Button from '@material-ui/core/Button';
@@ -43,7 +43,6 @@ class Contact extends Component {
     }
 
     submitButton(event) {
-        var self = this;
     
         console.log("values", this.state.fname, 
                                 this.state.lname, 
@@ -51,11 +50,11 @@ class Contact extends Component {
                                 this.state.subject, 
                                 this.state.msg);
         
-        if (this.state.fname == "" || 
-            this.state.lname == "" || 
-            this.state.email == "" || 
-            this.state.subject == "" || 
-            this.state.msg == "") {
+        if (this.state.fname === "" || 
+            this.state.lname === "" || 
+            this.state.email === "" || 
+            this.state.subject === "" || 
+            this.state.msg === "") {
             alert("Fill in all fields!");
             console.log("Missing fields");
         }
@@ -93,7 +92,7 @@ class Contact extends Component {
         const style = {
             margin: 12,
         };
-        return <div className="contact">
+        return <div className="contact" id="contact">
             <h1>Contact</h1>
             <MuiThemeProvider>
                 <div>

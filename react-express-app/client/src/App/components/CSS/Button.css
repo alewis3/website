@@ -10,11 +10,8 @@ a.button {
 	border-color: white;
 	border-radius: 8px;
 	width: 30vw;
+	background: #6F3524;
 }
 a.button:hover {
-	color: black;
+	color: grey;
 }
-.button1 {background: #EF959A;}
-.button2 {background: #6F3524;}
-.button3 {background: #F1C47A;}
-.button4 {background: #E8AF78;}

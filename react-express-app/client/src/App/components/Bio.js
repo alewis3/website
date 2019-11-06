@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Bio.css';
+import './CSS/Bio.css';
 
 import Countdown from './Countdown';
 
@@ -16,10 +16,10 @@ class Bio extends Component {
             </div>
         )
         const Bio = () => (
-            <div className="bio">
+            <div className="bio" id="about">
                 <Photo/>
                 <About/>
-                <Countdown timeTillDate="05 08 2020 12:00:00" timeFormat="MM DD YYYY hh:mm:ss"/>
+                <Countdown timeTillDate="2020-05-09 06:00" timeFormat="YYYY-MM-DD HH:mm" timeTillDateFormatted="May 9th, 2020"/>
             </div>
         )
         return <Bio/>;

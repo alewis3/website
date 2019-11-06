@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './ProjectSection.css';
+import './CSS/ProjectSection.css';
 
 import Project from './Project';
 
@@ -18,13 +18,13 @@ class ProjectSection extends Component {
             return {__html: "In the Spring of 2019, Amanda took the SWE I class and worked on a scrum team of 6 to build a system that would utilize (simulated) automated vehicles to deliver services and goods to consumers. She oversaw the building of the vehicle simulator, written in python and using multithreading to simulte multiple vehicles at once."}
         }
         const ProjectSection = () => (
-            <div className="projects">
+            <div className="projects" id="projects-internships">
                 <h1>Projects and Internships</h1>
                 <div className="project-section">
-                    <Project title="SWE II We-IoT Project" description={IoTBio()} src="/We-IoT.png" alt="We-IoT Logo"/>
+                    <Project title="We-IoT Project" description={IoTBio()} src="/We-IoT.png" alt="We-IoT Logo"/>
                     <Project title="Java Multithreading Vehicle Simulator Project" description={JVMTBio()} src="/java.jpg" alt="Java Logo"/>
                     <Project title="Software Engineering Internship" description={ModBio()} src="/mod_logo.png" alt="Modernize Logo"/>
-                    <Project title="SWE I We-Go Project" description={GoBio()} src="/We-Go.png" alt="We-Go Logo"/>
+                    <Project title="We-Go Project" description={GoBio()} src="/We-Go.png" alt="We-Go Logo"/>
                 </div>
             </div>
         )

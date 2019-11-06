@@ -1,5 +1,5 @@
 table, th, td {
-    border: 1px solid black;
+    border: 1px solid #6F3524;
     border-collapse: collapse;
     width: 95vw;
     align-content: center;
@@ -19,13 +19,13 @@ h1 {
 }
 
 th {
-    background: #ffb8ab;
+    background: #d3d3d3;
     font-size: 18px;
 }
 
 tr:nth-child(odd) {
-    background: #ffdcd5;
+    background: #d3d3d3;
 }
 tr:nth-child(even) {
-    background: #ffb8ab;
+    background: #f0f0f0;
 }
