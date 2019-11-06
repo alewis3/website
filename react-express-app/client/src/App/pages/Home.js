@@ -8,6 +8,7 @@ import Table from './../components/Table';
 import Contact from './../components/Contact';
 import Footer from './../components/Footer';
 import Nav from './../components/Nav';
+import Awards from './../components/Awards';
 
 class Home extends Component {
   render() {
@@ -19,6 +20,7 @@ class Home extends Component {
       <Header src={"/header.png"} />
       <Bio text={bio} src={"/linkedin.jpg"} alt="Amanda Lewis"/>
       <ProjectSection/>
+      <Awards/>
       <Table/>
       <Contact/>
       <Footer/>

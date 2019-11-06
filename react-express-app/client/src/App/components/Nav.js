@@ -4,13 +4,6 @@ import './CSS/Nav.css';
 
 class Nav extends Component {
 
-    handleClick = (event) => {
-        var valueClicked = event.target.value;
-        console.log(valueClicked + " " + typeof(valueClicked))
-        var element = document.getElementById(valueClicked);
-        element.scrollIntoView(true, {behavior: "smooth"});
-    }
-
     handleAboutClick = () => {
         var element = document.getElementById("about");
         element.scrollIntoView(true, {behavior: "smooth"});
@@ -18,6 +11,11 @@ class Nav extends Component {
 
     handleProjectsClick = () => {
         var element = document.getElementById("projects-internships");
+        element.scrollIntoView(true, {behavior: "smooth"});
+    }
+
+    handleProjectsClick = () => {
+        var element = document.getElementById("awards");
         element.scrollIntoView(true, {behavior: "smooth"});
     }
 
@@ -36,7 +34,8 @@ class Nav extends Component {
             <div className="nav">
                 <a href="#about" onClick={this.handleAboutClick} value="about">ABOUT</a> 
                 <a href="#projects" onClick={this.handleProjectsClick} value="projects-internships">PROJECTS</a>
-                <a href="#courses" onClick={this.handleCoursesClick} value="courses">COURSES TAKEN</a>
+                <a href="#awards" onClick={this.handleAwardsClick} value="awards">AWARDS</a>
+                <a href="#courses" onClick={this.handleCoursesClick} value="courses">STEM COURSES TAKEN</a>
                 <a href="#contact" onClick={this.handleContactClick} value="contact">CONTACT</a>
             </div>
         );
