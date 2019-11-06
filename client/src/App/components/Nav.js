@@ -10,7 +10,7 @@ class Nav extends Component {
     }
 
     handleProjectsClick = () => {
-        var element = document.getElementById("projects-internships");
+        var element = document.getElementById("projects");
         element.scrollIntoView(true, {behavior: "smooth"});
     }
 
@@ -33,7 +33,7 @@ class Nav extends Component {
         return (
             <div className="nav">
                 <a href="#about" onClick={this.handleAboutClick} value="about">ABOUT</a> 
-                <a href="#projects" onClick={this.handleProjectsClick} value="projects-internships">PROJECTS</a>
+                <a href="#projects" onClick={this.handleProjectsClick} value="projects">PROJECTS</a>
                 <a href="#awards" onClick={this.handleAwardsClick} value="awards">AWARDS</a>
                 <a href="#courses" onClick={this.handleCoursesClick} value="courses">STEM COURSES TAKEN</a>
                 <a href="#contact" onClick={this.handleContactClick} value="contact">CONTACT</a>
