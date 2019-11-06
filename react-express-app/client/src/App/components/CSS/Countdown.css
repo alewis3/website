@@ -4,6 +4,12 @@ b {
     text-transform: uppercase;
 }
 
+.countdown {
+    float: right;
+    width: 50%;
+    display: block;
+}
+
 .countdown-wrapper {
     display: flex;
     align-items: center;
@@ -40,4 +46,14 @@ b {
     left: 0;
     width: 100px;
     height: 100px;
+}
+
+p.grad-date {
+    display: inline-flex;
+    text-transform: uppercase;
+}
+
+p.grad-date-hidden {
+    display: none;
+    visibility: hidden;
 }

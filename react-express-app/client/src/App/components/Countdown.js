@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import moment from 'moment';
-import './Countdown.css';
+import './CSS/Countdown.css';
 
 class Countdown extends Component {
 
@@ -8,7 +8,8 @@ class Countdown extends Component {
         days: undefined,
         hours: undefined,
         minutes: undefined,
-        seconds: undefined
+        seconds: undefined,
+        clicked: false
     }
 
     componentDidMount() {
@@ -32,6 +33,16 @@ class Countdown extends Component {
         }
     }
 
+    gradClicked = () => {
+        if (this.state.clicked) {
+            console.log("hiding");
+            this.setState({clicked: false});
+        } else if (!this.state.clicked) {
+            console.log("showing");
+            this.setState({clicked: true});
+        }
+    }
+
     render() {
         var {days, hours, minutes, seconds} = this.state;
         const daysRadius = mapNumber(days, 200, 0, 0, 360);
@@ -44,14 +55,15 @@ class Countdown extends Component {
         }
 
         const Countdown = () => (
-            <div>
+            <div className="countdown">
                 <b>Countdown to Graduation!</b>
-                <div className="countdown-wrapper">
+                <div className="countdown-wrapper" onClick={this.gradClicked}>
                     {days && (<CountdownItem count={days} name="Days" radius={daysRadius}/>)}
                     {hours && (<CountdownItem count={hours} name="Hours" radius={hoursRadius}/>)}
                     {minutes && (<CountdownItem count={minutes} name="Minutes" radius={minutesRadius}/>)}
                     {seconds && (<CountdownItem count={seconds} name="Seconds" radius={secondsRadius}/>)}
                 </div>
+                <p className={!this.state.clicked ? "grad-date-hidden": "grad-date"}>Graduation is on {this.props.timeTillDateFormatted}!</p>
             </div>
         )
         return <Countdown/>;

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Table.css';
+import './CSS/Table.css';
 import axios from 'axios';
 
 class Table extends Component {
@@ -27,7 +27,7 @@ class Table extends Component {
             <tr key={key}><td>{row.courseNumber}</td><td>{row.courseName}</td><td>{row.semesterTaken}</td></tr>
         );
         return (
-            <div className="tableDiv">
+            <div className="tableDiv" id="courses">
                 <h1>Courses Taken</h1>
             <table>
                 <thead><tr><th>Course Number</th><th>Course Name</th><th>Semester Taken</th></tr></thead>
