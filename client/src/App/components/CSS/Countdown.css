@@ -1,0 +1,58 @@
+b {
+    letter-spacing: 2px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.countdown {
+    margin: 10px auto;
+    display: block;
+}
+
+.countdown-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.countdown-item {
+    color: #111;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    line-height: 30px;
+    margin: 10px;
+    padding-top: 10px;
+    position: relative;
+    width: 100px;
+    height: 100px;
+}
+
+.countdown-item span {
+    color: #6F3524;
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.countdown-svg {
+    color: #6F3524;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+}
+
+p.grad-date {
+    display: inline-flex;
+    text-transform: uppercase;
+}
+
+p.grad-date-hidden {
+    display: none;
+    visibility: hidden;
+}

@@ -1,0 +1,7 @@
+.button-row {
+    width: 70%;
+    background: #F3E195;
+    display: inline-table;
+    display: inline-flex; 
+    justify-content: space-evenly;
+}
