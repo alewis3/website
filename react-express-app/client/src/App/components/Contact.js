@@ -74,7 +74,7 @@ class Contact extends Component {
                 "msg": msgTrimmed
             }
         
-            axios.post('/sendEmail', payload).then(function(response) {
+            axios.post('https://amandalewisdev.com/api/sendEmail', payload).then(function(response) {
                 console.log(response);
                 if (response.status === 200) {
                     console.log("Test email sent!");

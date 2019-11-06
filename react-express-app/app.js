@@ -11,7 +11,7 @@ var usersRouter = require('./routes/users');
 
 var mongoose = require('mongoose');
 
-var connection = mongoose.connect('mongodb://amanda:' + encodeURIComponent(process.env.MONGO_PW) + '@localhost:27017/courses?authSource=admin&w=1', {useNewUrlParser: true, useUnifiedTopology: true }, function (error) {
+var connection = mongoose.connect('mongodb://localhost:27017/courses', {useNewUrlParser: true, useUnifiedTopology: true }, function (error) {
 
   if (error) console.log(error);
   else
@@ -32,14 +32,12 @@ app.use(cookieParser());
 app.use('/api/', indexRouter);
 app.use('/api/users', usersRouter);
 
-app.use('public', express.static(path.join(__dirname, 'client/public')));
+app.use(express.static(path.join(__dirname, 'client/build')));
 
-//production mode
-if(process.env.NODE_ENV === 'production') {   
-    app.use(express.static(path.join(__dirname, 'client/build'))); 
-    app.get('/', (req, res) => {    
-        res.sendFile(path.join(__dirname + 'client/build/index.html'));  
-    });
+if(process.env.NODE_ENV === 'production') {
+  app.get('/', function (req, res) {
+   	res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
+  });
 }
 else {
   app.get('/', (req, res) => {  
