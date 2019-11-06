@@ -9,14 +9,15 @@ class MyHeader extends Component {
         )
         const MyHeader = () => (
             <div id="header">
-                <div className="header-div">
+                <div className="header-wrapper">
                     <HeaderImg/>
-                    <div className="header-text">
+                    <div>
                         <h1>Amanda G. Lewis</h1>
                         <p>SOFTWARE DESIGNER AND ENGINEER</p>
                     </div>
+                    <ButtonRow/>
                 </div>
-                <ButtonRow/>
+                
             </div>
         )
         return (

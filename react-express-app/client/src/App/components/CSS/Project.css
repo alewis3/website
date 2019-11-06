@@ -24,5 +24,22 @@ div.project {
     margin: 10px 0px;
     width: 22vw;
     background: white;
-    display: inline-block;
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    position: relative;
+
+}
+
+@media only screen and (max-width: 600px) {
+    img.logo {
+        width: 80vw;
+        height: auto;
+    }
+    div.project {
+        width: 80vw;
+        display: flex;
+        justify-content: center;
+        margin: 5% 10%;
+    }
 }

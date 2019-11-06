@@ -1,17 +1,21 @@
-table, th, td {
+table {
     border: 1px solid #6F3524;
     border-collapse: collapse;
-    width: 95vw;
     align-content: center;
     margin-right: auto;
     margin-left: auto;
-    padding: 3px;
-    margin: 0px 40px;
+    width: 90%;
     color: #672e23;
+}
+
+th, td {
+    border: 1px solid #6F3524;
+    padding: 5px;
 }
 
 div.tableDiv {
     border-bottom: 3px solid #6F3524;
+    width: 100vw;
 }
 
 h1 {
@@ -28,4 +32,8 @@ tr:nth-child(odd) {
 }
 tr:nth-child(even) {
     background: #f0f0f0;
+}
+
+@media only screen and (max-width: 600px) {
+
 }
