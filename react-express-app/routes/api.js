@@ -17,8 +17,11 @@ router.options('/sendEmail', function (req, res, next) {
 
 router.post('/sendEmail', function(req, res, next) {
 
-  res.setHeader('Access-Control-Allow-Origin', 'https://amandalewisdev.com/');
-  res.setHeader('Access-Control-Allow-Origin', 'https://dev.amandalewisdev.com/');
+  var allowedOrigins = ['https://amandalewisdev.com/', 'https://dev.amandalewisdev.com/'];
+  var origin = req.headers.origin;
+  if(allowedOrigins.indexOf(origin) > -1){
+       res.setHeader('Access-Control-Allow-Origin', origin);
+  }
 
   console.log(req.body);
   testmail(req.body.first, req.body.last, req.body.email, req.body.subject, req.body.msg);
@@ -27,9 +30,12 @@ router.post('/sendEmail', function(req, res, next) {
 
 router.get('/getCourses', async function(req, res, next) {
 
-  res.setHeader('Access-Control-Allow-Origin', 'https://amandalewisdev.com/');
-  res.setHeader('Access-Control-Allow-Origin', 'https://dev.amandalewisdev.com/');
-
+  var allowedOrigins = ['https://amandalewisdev.com', 'https://dev.amandalewisdev.com'];
+  var origin = req.headers.origin;
+  if(allowedOrigins.indexOf(origin) > -1){
+       res.setHeader('Access-Control-Allow-Origin', origin);
+  }
+  
   var query = await Course.find({}).lean().sort({semesterInt: 1}).exec();
   res.status(200).send({query});
 });
