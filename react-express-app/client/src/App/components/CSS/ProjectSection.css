@@ -1,4 +1,6 @@
-div.projects div.project-section {
+div.project-section {
+    display: -webkit-flex;
+    -webkit-flex-wrap: wrap;
     display: flex; 
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -13,10 +15,18 @@ div.projects {
     border-top: 3px solid #6F3524;
 }
 
+div.project-section br {
+    display: none;
+}
+
 @media only screen and (max-width: 600px) {
-    div.projects div.project-section {
+    div.project-section {
         display: block; 
         justify-content: space-evenly;
         width: 100%;
     }
+}
+
+@media only screen and (max-width: 768px) {
+   
 }
