@@ -28,7 +28,7 @@ class Table extends Component {
         );
         return (
             <div className="tableDiv" id="courses">
-                <h1>Courses Taken</h1>
+                <h1>STEM Courses Taken</h1>
             <table>
                 <thead><tr><th>Course Number</th><th>Course Name</th><th>Semester Taken</th></tr></thead>
                 <tbody>
