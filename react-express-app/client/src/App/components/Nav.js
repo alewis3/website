@@ -36,7 +36,7 @@ class Nav extends Component {
             <div className="nav">
                 <a href="#about" onClick={this.handleAboutClick} value="about">ABOUT</a> 
                 <a href="#projects" onClick={this.handleProjectsClick} value="projects-internships">PROJECTS</a>
-                <a href="#courses" onClick={this.handleCoursesClick} value="courses">COURSES TAKEN</a>
+                <a href="#courses" onClick={this.handleCoursesClick} value="courses">STEM COURSES TAKEN</a>
                 <a href="#contact" onClick={this.handleContactClick} value="contact">CONTACT</a>
             </div>
         );
