@@ -1,0 +1,44 @@
+.awards-wrapper {
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.awards {
+    padding: 2px;
+    display: block;
+    color: #6F3524;
+    background: #F3E195;
+    border-bottom: 3px solid #6F3524;
+}
+
+div.award {
+    border: 2px solid #6F3524;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 500px;
+    padding: 2px 7px;
+    background-color: white;
+    height: auto;
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    position: relative;
+}
+
+img.award-img {
+    height: 350px;
+}
+
+@media only screen and (max-width: 768px) {
+    div.award {
+        width: 300px;
+    }
+
+    img.award-img {
+        height: 200px;
+    }
+}

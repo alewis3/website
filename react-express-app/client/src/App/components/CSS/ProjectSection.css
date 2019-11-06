@@ -1,6 +1,4 @@
 div.project-section {
-    display: -webkit-flex;
-    -webkit-flex-wrap: wrap;
     display: flex; 
     flex-wrap: wrap;
     justify-content: space-evenly;
