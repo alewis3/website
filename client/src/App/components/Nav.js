@@ -14,7 +14,7 @@ class Nav extends Component {
         element.scrollIntoView(true, {behavior: "smooth"});
     }
 
-    handleProjectsClick = () => {
+    handleAwardsClick = () => {
         var element = document.getElementById("awards");
         element.scrollIntoView(true, {behavior: "smooth"});
     }
