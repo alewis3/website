@@ -7,6 +7,7 @@ var dotenv = require('dotenv');
 dotenv.config();
 
 var indexRouter = require('./routes/index');
+var apiRouter = require('./routes/api');
 var usersRouter = require('./routes/users');
 
 var mongoose = require('mongoose');
@@ -29,22 +30,11 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
-app.use('/api/', indexRouter);
-app.use('/api/users', usersRouter);
+app.use('/', indexRouter);
+app.use('/api', apiRouter);
+app.use('/users', usersRouter);
 
 app.use(express.static(path.join(__dirname, 'client/build')));
-
-if(process.env.NODE_ENV === 'production') {
-  app.get('/', function (req, res) {
-   	res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
-  });
-}
-else {
-  app.get('/', (req, res) => {  
-    res.sendFile(path.join(__dirname+'/client/public/index.html'));
-  });
-}
-
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
