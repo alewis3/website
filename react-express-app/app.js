@@ -12,7 +12,7 @@ var usersRouter = require('./routes/users');
 
 var mongoose = require('mongoose');
 
-var connection = mongoose.connect('mongodb://amanda:' + encodeURIComponent(process.env.MONGO_PW) + 'localhost:27017/courses?authSource=admin&w=1', {useNewUrlParser: true, useUnifiedTopology: true }, function (error) {
+var connection = mongoose.connect('mongodb://amanda:' + encodeURIComponent(process.env.MONGO_PW) + '@localhost:27017/courses?authSource=admin&w=1', {useNewUrlParser: true, useUnifiedTopology: true }, function (error) {
 
   if (error) console.log(error);
   else
