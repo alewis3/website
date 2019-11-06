@@ -30,7 +30,7 @@ router.post('/sendEmail', function(req, res, next) {
 
 router.get('/getCourses', async function(req, res, next) {
 
-  var allowedOrigins = ['https://amandalewisdev.com/', 'https://dev.amandalewisdev.com/'];
+  var allowedOrigins = ['https://amandalewisdev.com', 'https://dev.amandalewisdev.com'];
   var origin = req.headers.origin;
   if(allowedOrigins.indexOf(origin) > -1){
        res.setHeader('Access-Control-Allow-Origin', origin);
