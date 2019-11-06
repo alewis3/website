@@ -1,3 +1,4 @@
+
 .about {
     display: block;
 	float: right;
@@ -7,7 +8,7 @@
 img.image {
     display: block;
 	float: left;
-	width: 50%;
+	width: 45%;
 }
 
 div.bio {
@@ -27,4 +28,15 @@ p.bio {
 
 .clear {
     clear: both;
+}
+
+@media only screen and (max-width: 768px) {
+    img.image {
+        float: none;
+        width: 100%;
+    }
+    .about {
+        float: none;
+        width: 100%;
+    }
 }

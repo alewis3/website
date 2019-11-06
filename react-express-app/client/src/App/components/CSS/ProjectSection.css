@@ -1,6 +1,8 @@
-div.projects div.project-section {
-    display: inline-table;
-    display: inline-flex; 
+div.project-section {
+    display: -webkit-flex;
+    -webkit-flex-wrap: wrap;
+    display: flex; 
+    flex-wrap: wrap;
     justify-content: space-evenly;
     width: 100%;
 }
@@ -11,4 +13,20 @@ div.projects {
     background: #e8af78;
     border-bottom: 3px solid #6F3524;
     border-top: 3px solid #6F3524;
+}
+
+div.project-section br {
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+    div.project-section {
+        display: block; 
+        justify-content: space-evenly;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+   
 }

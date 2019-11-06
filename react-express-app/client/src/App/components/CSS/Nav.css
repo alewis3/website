@@ -5,8 +5,8 @@
   z-index: 1;
   bottom: 0; 
   left: 0;
+  padding: 5px 0px;
   background-color: #815E5B; /* Black */
-  padding-top: 20px;
   border-top: 3px solid #6F3524;
 }
 
@@ -17,5 +17,17 @@
 
 .nav a:hover {
   color: grey;
+}
+
+@media only screen and (max-width: 600px) {
+  .nav {
+    padding: 2px 0px;
+    align-content: center;
+    background-color: #815E5B;
+  }
+
+  .nav a {
+    margin: 0px 2px;
+  }
 }
 
