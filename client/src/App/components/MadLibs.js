@@ -45,8 +45,8 @@ class MadLibs extends Component {
 
     componentDidMount = () => {
         let comp = this;
-        axios.get('http://localhost:5000/api/madlib').then(function(response) {
-        //axios.get('https://amandalewisdev.com/api/madlib').then(function(response) {
+        //axios.get('http://localhost:5000/api/madlib').then(function(response) {
+        axios.get('https://amandalewisdev.com/api/madlib').then(function(response) {
             if (response.status === 200) {
                 comp.setState({data: response.data});
             } else {
