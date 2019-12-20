@@ -10,11 +10,11 @@ let MadLib = require('../models/madlib');
 
 router.get('/courses', async function(req, res, next) {
 
-  // var allowedOrigins = ['https://amandalewisdev.com', 'https://dev.amandalewisdev.com'];
-  // var origin = req.headers.origin;
-  // if(allowedOrigins.indexOf(origin) > -1){
-  //      res.setHeader('Access-Control-Allow-Origin', origin);
-  // }
+  var allowedOrigins = ['https://amandalewisdev.com', 'https://dev.amandalewisdev.com'];
+  var origin = req.headers.origin;
+  if(allowedOrigins.indexOf(origin) > -1){
+       res.setHeader('Access-Control-Allow-Origin', origin);
+  }
   await Course.find().lean().sort({semesterInt: 1}).exec(
       function (err, query) {
           if (err) {
@@ -77,6 +77,11 @@ router.post('/courses', function(req, res, next) {
  */
 router.get('/madLib', async function (req, res) {
 
+    var allowedOrigins = ['https://amandalewisdev.com', 'https://dev.amandalewisdev.com'];
+    var origin = req.headers.origin;
+    if(allowedOrigins.indexOf(origin) > -1){
+        res.setHeader('Access-Control-Allow-Origin', origin);
+    }
     MadLib.countDocuments({}).exec(function (err, count) {
         if (count > 0) {
             var random = Math.floor(Math.random() * count);
