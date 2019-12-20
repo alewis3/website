@@ -5,10 +5,10 @@ import Header from '../components/MyHeader';
 import Bio from './../components/Bio';
 import ProjectSection from './../components/ProjectSection';
 import Table from './../components/Table'; 
-import Contact from './../components/Contact';
 import Footer from './../components/Footer';
 import Nav from './../components/Nav';
 import Awards from './../components/Awards';
+import MadLibs from './../components/MadLibs';
 
 class Home extends Component {
   render() {
@@ -22,7 +22,7 @@ class Home extends Component {
       <ProjectSection/>
       <Awards/>
       <Table/>
-      <Contact/>
+      <MadLibs/>
       <Footer/>
       <ScrollUpButton
         StopPosition={0}
