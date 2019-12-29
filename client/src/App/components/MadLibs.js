@@ -50,6 +50,10 @@ class MadLibs extends Component {
     };
 
     componentDidMount = () => {
+        this.makeMadLibsRequest();
+    };
+
+    makeMadLibsRequest() {
         let comp = this;
         //axios.get('http://localhost:5000/api/madlib').then(function(response) {
         axios.get('https://amandalewisdev.com/api/madlib').then(function(response) {
@@ -61,69 +65,93 @@ class MadLibs extends Component {
         }).catch(function (error) {
             console.log(error);
         });
+    }
+
+    resetStory = () => {
+        this.setState({
+            data: {},
+            isComplete: false,
+            nouns: [],
+            pluralNouns: [],
+            femaleNames: [],
+            maleNames: [],
+            adjectives: [],
+            adverbs: [],
+            verbs: [],
+            verbsEd: [],
+            verbsS: [],
+            verbsIng: [],
+            colors: [],
+            foods: [],
+            bodyParts: [],
+            showPopup: false
+        });
+        this.makeMadLibsRequest();
     };
 
     parseStoryArray = (storyArr) => {
          var story = "";
          for (var i = 0; i < storyArr.length; i++) {
              var piece = storyArr[i];
-             if (piece.length > 2) {
+             if (piece.length > 2 && piece.length < 5) {
                  var subpiece2 = piece.substring(0, 2);
                  var pieceNumber2 = piece.substring(2, 3);
                  var number2 = -1;
                  if (subpiece2 === "PN") {
                      number2 = parseInt(pieceNumber2, 10);
-                     story += this.state.pluralNouns[number2];
+                     story += this.state.pluralNouns[number2-1];
                  }
                  else if (subpiece2 === "FN") {
                      number2 = parseInt(pieceNumber2, 10);
-                     story += this.state.femaleNames[number2];
+                     story += this.state.femaleNames[number2-1];
                  }
                  else if (subpiece2 === "MN") {
                      number2 = parseInt(pieceNumber2, 10);
-                     story += this.state.maleNames[number2];
+                     story += this.state.maleNames[number2-1];
                  }
-                 else if (subpiece2 === "AD") {
+                 else if (subpiece2 === "AJ") {
                      number2 = parseInt(pieceNumber2, 10);
-                     story += this.state.adjectives[number2];
+                     story += this.state.adjectives[number2-1];
                  }
                  else if (subpiece2 === "AV") {
                      number2 = parseInt(pieceNumber2, 10);
-                     story += this.state.adverbs[number2];
+                     story += this.state.adverbs[number2-1];
                  }
                  else if (subpiece2 === "VD") {
                      number2 = parseInt(pieceNumber2, 10);
-                     story += this.state.verbsEd[number2];
+                     story += this.state.verbsEd[number2-1];
                  }
                  else if (subpiece2 === "VG") {
                      number2 = parseInt(pieceNumber2, 10);
-                     story += this.state.verbsIng[number2];
+                     story += this.state.verbsIng[number2-1];
                  }
                  else if (subpiece2 === "BP") {
                      number2 = parseInt(pieceNumber2, 10);
-                     story += this.state.bodyParts[number2];
+                     story += this.state.bodyParts[number2-1];
                  }
                  else {
                      var subpiece1 = piece.substring(0,1);
                      var pieceNumber1 = piece.substring(1, 2);
                      var number1 = -1;
+                     console.log(piece);
                      if (subpiece1 === "N") {
                          number1 = parseInt(pieceNumber1, 10);
-                         story += this.state.nouns[number1];
+                         story += this.state.nouns[number1-1];
                      }
                      else if (subpiece1 === "V") {
                          number1 = parseInt(pieceNumber1, 10);
-                         story += this.state.verbs[number1]
+                         story += this.state.verbs[number1-1]
                      }
                      else if (subpiece1 === "F") {
                          number1 = parseInt(pieceNumber1, 10);
-                         story += this.state.foods[number1];
+                         story += this.state.foods[number1-1];
                      }
                      else if (subpiece1 === "C") {
                          number1 = parseInt(pieceNumber1, 10);
-                         story += this.state.colors[number1];
+                         story += this.state.colors[number1-1];
                      }
                      else {
+                         console.log("how did we get here: " + piece);
                          story += piece;
                      }
                  }
@@ -172,6 +200,7 @@ class MadLibs extends Component {
                 <div className="madLibs">
                     <h2> Let's Play Mad Libs! </h2>
                     <p id="story">{this.parseStoryArray(storyArray)}</p>
+                    <button clasName="btn" onClick={this.resetStory()}> Play Again? </button>
                 </div>
             )
         }
@@ -263,8 +292,6 @@ class GetMadLibs extends Component {
     };
 
     handleNounChange = (i, e) => {
-        console.log("i"+ i);
-        console.log("e" + e);
         var newValues = this.state.nouns.slice();
         newValues[i] = e.target.value.toUpperCase();
         this.setState({nouns: newValues});
@@ -584,7 +611,7 @@ class Popup extends Component {
                     <p>{verbsSExplanation}</p>
                     <h4>Verbs ending in 'ing': </h4>
                     <p>{verbsIngExplanation}</p>
-                    <button className="close" onClick={this.props.closePopup}>Close Me</button>
+                    <button className="btn" onClick={this.props.closePopup}>Close Me</button>
                 </OverflowScrolling>
             </div>
         );

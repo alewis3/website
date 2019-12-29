@@ -1,6 +1,7 @@
 div.madLibs {
     margin-left: auto;
     margin-right: auto;
+    white-space: pre-wrap;
 }
 
 .popup {
@@ -26,9 +27,10 @@ div.madLibs {
     background: white;
     overflow: auto;
     -webkit-overflow-scrolling: touch;
+    white-space: pre-wrap;
 }
 
-.close {
+.btn {
     border: none;
     color: white;
     padding: 10px;
