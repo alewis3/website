@@ -182,37 +182,22 @@ class GetMadLibs extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            nouns: [],
-            pluralNouns: [],
-            femaleNames: [],
-            maleNames: [],
-            adjectives: [],
-            adverbs: [],
-            verbs: [],
-            verbsEd: [],
-            verbsS: [],
-            verbsIng: [],
-            colors: [],
-            foods: [],
-            bodyParts: [],
+            nouns: this.fillWithEmptyStrings([], this.props.nouns),
+            pluralNouns: this.fillWithEmptyStrings([], this.props.pluralNouns),
+            femaleNames: this.fillWithEmptyStrings([], this.props.femaleNames),
+            maleNames: this.fillWithEmptyStrings([], this.props.maleNames),
+            adjectives: this.fillWithEmptyStrings([], this.props.adjectives),
+            adverbs: this.fillWithEmptyStrings([], this.props.adverbs),
+            verbs: this.fillWithEmptyStrings([], this.props.verbs),
+            verbsEd: this.fillWithEmptyStrings([], this.props.verbsEd),
+            verbsS: this.fillWithEmptyStrings([], this.props.verbsS),
+            verbsIng: this.fillWithEmptyStrings([], this.props.verbsIng),
+            colors: this.fillWithEmptyStrings([], this.props.colors),
+            foods: this.fillWithEmptyStrings([], this.props.foods),
+            bodyParts: this.fillWithEmptyStrings([], this.props.bodyParts),
             done: false,
             errorMessage:""
         };
-        this.setState({
-            nouns: this.fillWithEmptyStrings(this.state.nouns, this.props.nouns),
-            pluralNouns: this.fillWithEmptyStrings(this.state.pluralNouns, this.props.pluralNouns),
-            femaleNames: this.fillWithEmptyStrings(this.state.femaleNames, this.props.femaleNames),
-            maleNames: this.fillWithEmptyStrings(this.state.maleNames, this.props.maleNames),
-            adjectives: this.fillWithEmptyStrings(this.state.adjectives, this.props.adjectives),
-            adverbs: this.fillWithEmptyStrings(this.state.adverbs, this.props.adverbs),
-            verbs: this.fillWithEmptyStrings(this.state.verbs, this.props.verbs),
-            verbsEd: this.fillWithEmptyStrings(this.state.verbsEd, this.props.verbsEd),
-            verbsS: this.fillWithEmptyStrings(this.state.verbsS, this.props.verbsS),
-            verbsIng: this.fillWithEmptyStrings(this.state.verbsIng, this.props.verbsIng),
-            colors: this.fillWithEmptyStrings(this.state.colors, this.props.colors),
-            foods: this.fillWithEmptyStrings(this.state.foods, this.props.foods),
-            bodyParts: this.fillWithEmptyStrings(this.state.bodyParts, this.props.bodyParts)
-        });
 
     }
 
