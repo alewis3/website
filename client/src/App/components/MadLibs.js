@@ -273,73 +273,73 @@ class GetMadLibs extends Component {
     handlePluralNounChange = (i, e) => {
         var newValues = this.state.pluralNouns.slice();
         newValues[i] = e.target.value.toUpperCase();
-        this.setState({nouns: newValues});
+        this.setState({pluralNouns: newValues});
     };
 
     handleFemaleNameChange = (i, e) => {
         var newValues = this.state.femaleNames.slice();
         newValues[i] = e.target.value.toUpperCase();
-        this.setState({nouns: newValues});
+        this.setState({femaleNames: newValues});
     };
 
     handleMaleNameChange = (i, e) => {
         var newValues = this.state.maleNames.slice();
         newValues[i] = e.target.value.toUpperCase();
-        this.setState({nouns: newValues});
+        this.setState({maleNames: newValues});
     };
 
     handleAdjectiveChange = (i, e) => {
         var newValues = this.state.adjectives.slice();
         newValues[i] = e.target.value.toUpperCase();
-        this.setState({nouns: newValues});
+        this.setState({adjectives: newValues});
     };
 
     handleAdverbChange = (i, e) => {
         var newValues = this.state.adverbs.slice();
         newValues[i] = e.target.value.toUpperCase();
-        this.setState({nouns: newValues});
+        this.setState({adverbs: newValues});
     };
 
     handleVerbChange = (i, e) => {
         var newValues = this.state.verbs.slice();
         newValues[i] = e.target.value.toUpperCase();
-        this.setState({nouns: newValues});
+        this.setState({verbs: newValues});
     };
 
     handleVerbEdChange = (i, e) => {
         var newValues = this.state.verbsEd.slice();
         newValues[i] = e.target.value.toUpperCase();
-        this.setState({nouns: newValues});
+        this.setState({verbsEd: newValues});
     };
 
     handleVerbSChange = (i, e) => {
         var newValues = this.state.verbsS.slice();
         newValues[i] = e.target.value.toUpperCase();
-        this.setState({nouns: newValues});
+        this.setState({verbsS: newValues});
     };
 
     handleVerbIngChange = (i, e) => {
         var newValues = this.state.verbsIng.slice();
         newValues[i] = e.target.value.toUpperCase();
-        this.setState({nouns: newValues});
+        this.setState({verbsIng: newValues});
     };
 
     handleColorChange = (i, e) => {
         var newValues = this.state.colors.slice();
         newValues[i] = e.target.value.toUpperCase();
-        this.setState({nouns: newValues});
+        this.setState({colors: newValues});
     };
 
     handleFoodChange = (i, e) => {
         var newValues = this.state.foods.slice();
         newValues[i] = e.target.value.toUpperCase();
-        this.setState({nouns: newValues});
+        this.setState({foods: newValues});
     };
 
     handleBodyPartChange = (i, e) => {
         var newValues = this.state.bodyParts.slice();
         newValues[i] = e.target.value.toUpperCase();
-        this.setState({nouns: newValues});
+        this.setState({bodyParts: newValues});
     };
 
     render() {
