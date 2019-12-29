@@ -201,7 +201,7 @@ class MadLibs extends Component {
             let storyArray = this.state.data.story;
             return (
                 <div className="madLibs" id="madLibs">
-                    <h2> {this.state.data.title} </h2>
+                    <h2 id="title"> {this.state.data.title} </h2>
                     <p id="story">{this.parseStoryArray(storyArray)}</p>
                     <button className="btn" onClick={() => this.resetStory()}> Play Again? </button>
                 </div>
