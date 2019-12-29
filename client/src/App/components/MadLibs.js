@@ -169,9 +169,9 @@ class MadLibs extends Component {
         const isComplete = this.state.isComplete;
         if (!isComplete) {
             return (
-            <div className="madLibs">
-                <h2> Let's Play Mad Libs! </h2>
-                <button onClick={this.togglePopup.bind(this)}> ? </button>
+            <div className="madLibs" id="madLibs">
+                <h2 id="title"> Let's Play Mad Libs! </h2>
+                <button className="btn" onClick={this.togglePopup.bind(this)}> ? </button>
                 {this.state.showPopup ?
                     <Popup closePopup={this.togglePopup.bind(this)}/>
                     : null
@@ -198,7 +198,7 @@ class MadLibs extends Component {
         else {
             let storyArray = this.state.data.story;
             return (
-                <div className="madLibs">
+                <div className="madLibs" id="madLibs">
                     <h2> {this.state.data.title} </h2>
                     <p id="story">{this.parseStoryArray(storyArray)}</p>
                     <button className="btn" onClick={() => this.resetStory()}> Play Again? </button>
@@ -583,6 +583,7 @@ class GetMadLibs extends Component {
                 {foodsArray}
                 {bodyPartsArray}
                 <input
+                    className="btn"
                     type='submit'
                     value='Done'
                     onClick={this.checkDone.bind(this)}

@@ -1,13 +1,21 @@
 div.madLibs {
-    border-bottom: 1px solid #6F3524;
+    border-bottom: 3px solid #6F3524;
     border-top: 3px solid #6F3524;
     margin: 0px auto;
     white-space: pre-wrap;
     background: #e8af78;
 }
 
-#id {
+.textEntry {
+    color: #6F3524;
+}
+
+#story {
     white-space: pre-wrap;
+}
+
+#title {
+    color: #6F3524;
 }
 
 .popup {
