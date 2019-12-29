@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import './CSS/MadLibs.css';
 import axios from "axios";
+import OverflowScrolling from 'react-overflow-scrolling';
 
 class MadLibs extends Component {
     constructor(props) {
@@ -539,7 +540,7 @@ class Popup extends Component {
 
         return (
             <div className='popup'>
-                <div className='popup_inner'>
+                <OverflowScrolling className='popup_inner'>
                     <h3>{madLibsExplanation}</h3>
                     <h4>Singular nouns: </h4>
                     <p>{nounsExplanation}</p>
@@ -558,7 +559,7 @@ class Popup extends Component {
                     <h4>Verbs ending in 'ing': </h4>
                     <p>{verbsIngExplanation}</p>
                     <button className="close" onClick={this.props.closePopup}>Close Me</button>
-                </div>
+                </OverflowScrolling>
             </div>
         );
     }

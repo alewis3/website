@@ -15,14 +15,17 @@ div.madLibs {
     background-color: rgba(0,0,0, 0.5);
 }
 .popup_inner {
+    padding: 4px;
     position: absolute;
     left: 25%;
     right: 25%;
-    top: 25%;
-    bottom: 25%;
+    top: 9%;
+    bottom: 9%;
     margin: auto;
     border-radius: 20px;
     background: white;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 .close {
