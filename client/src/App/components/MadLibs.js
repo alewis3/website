@@ -94,7 +94,7 @@ class MadLibs extends Component {
          var story = "";
          for (var i = 0; i < storyArr.length; i++) {
              var piece = storyArr[i];
-             if (piece.length > 2 && piece.length < 5) {
+             if (piece.length > 1 && piece.length < 5) {
                  var subpiece2 = piece.substring(0, 2);
                  var pieceNumber2 = piece.substring(2, 3);
                  var number2 = -1;
@@ -169,7 +169,7 @@ class MadLibs extends Component {
         const isComplete = this.state.isComplete;
         if (!isComplete) {
             return (
-            <div>
+            <div className="madLibs">
                 <h2> Let's Play Mad Libs! </h2>
                 <button onClick={this.togglePopup.bind(this)}> ? </button>
                 {this.state.showPopup ?
@@ -472,7 +472,7 @@ class GetMadLibs extends Component {
         for (var v = 0; v < this.props.verbs; v++) {
             verbsArray.push(
                 <div className="textEntry" key={v}>
-                    <p>Enter an Verb: </p>
+                    <p>Enter a Verb: </p>
                     <input
                         className="txt"
                         type='text'
@@ -486,7 +486,7 @@ class GetMadLibs extends Component {
         for (var vd = 0; vd < this.props.verbsEd; vd++) {
             verbsEdArray.push(
                 <div className="textEntry" key={vd}>
-                    <p>Enter an Verb ending in 'ed': </p>
+                    <p>Enter a Verb ending in 'ed': </p>
                     <input
                         className="txt"
                         type='text'
@@ -500,7 +500,7 @@ class GetMadLibs extends Component {
         for (var vs = 0; vs < this.props.verbsS; vs++) {
             verbsSArray.push(
                 <div className="textEntry" key={vs}>
-                    <p>Enter an Verb ending in 's': </p>
+                    <p>Enter a Verb ending in 's': </p>
                     <input
                         className="txt"
                         type='text'
@@ -514,7 +514,7 @@ class GetMadLibs extends Component {
         for (var vg = 0; vg < this.props.verbsIng; vg++) {
             verbsIngArray.push(
                 <div className="textEntry" key={vg}>
-                    <p>Enter an Verb ending in 'ing': </p>
+                    <p>Enter a Verb ending in 'ing': </p>
                     <input
                         className="txt"
                         type='text'

@@ -2,6 +2,11 @@ div.madLibs {
     margin-left: auto;
     margin-right: auto;
     white-space: pre-wrap;
+    background: #e8af78;
+}
+
+#id {
+    white-space: pre-wrap;
 }
 
 .popup {
