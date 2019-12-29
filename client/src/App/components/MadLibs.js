@@ -201,7 +201,7 @@ class MadLibs extends Component {
                 <div className="madLibs">
                     <h2> Let's Play Mad Libs! </h2>
                     <p id="story">{this.parseStoryArray(storyArray)}</p>
-                    <button className="btn" onClick={this.resetStory()}> Play Again? </button>
+                    <button className="btn" onClick={() => this.resetStory()}> Play Again? </button>
                 </div>
             )
         }
