@@ -20,9 +20,14 @@ class MadLibs extends Component {
             verbsIng: [],
             colors: [],
             foods: [],
-            bodyParts: []};
+            bodyParts: [],
+            showPopup: false};
         this.componentDidMount = this.componentDidMount.bind(this);
         this.ReturnMadLibs = this.ReturnMadLibs.bind(this);
+    }
+
+    togglePopup() {
+        this.setState({showPopup: !this.state.showPopup});
     }
 
     ReturnMadLibs = (nounsArr, pluralNounsArr, femaleNamesArr, maleNamesArr, adjectivesArr, adverbsArr, verbsArr, verbsEdArr, verbsSArr, verbsIngArr, colorsArr, foodsArr, bodyPartsArr) => {
@@ -133,7 +138,15 @@ class MadLibs extends Component {
     render() {
         const isComplete = this.state.isComplete;
         if (!isComplete) {
-            return <GetMadLibs
+            return (
+            <div>
+                <h2> Let's Play Mad Libs! </h2>
+                <button> onclick={this.togglePopup.bind(this)} ? </button>
+                {this.state.showPopup ?
+                    <Popup closePopup={this.togglePopup.bind(this)}/>
+                    : null
+                }
+            <GetMadLibs
                 nouns={this.state.data.nounsNeeded}
                 pluralNouns={this.state.data.pluralNounsNeeded}
                 femaleNames={this.state.data.femaleNamesNeeded}
@@ -149,11 +162,14 @@ class MadLibs extends Component {
                 bodyParts={this.state.data.bodyPartsNeeded}
                 callback={this.ReturnMadLibs}
             />
+            </div>
+            )
         }
         else {
             let storyArray = this.state.data.story;
             return (
                 <div className="madLibs">
+                    <h2> Let's Play Mad Libs! </h2>
                     <p id="story">{this.parseStoryArray(storyArray)}</p>
                 </div>
             )
@@ -316,7 +332,7 @@ class GetMadLibs extends Component {
 
         for (var n = 0; n < this.props.nouns; n++) {
             nounsArray.push(
-                <div className="textEntry">
+                <div className="textEntry" key={n}>
                     <p>Enter a Noun: </p>
                     <input
                         type='text'
@@ -329,7 +345,7 @@ class GetMadLibs extends Component {
 
         for (var pn = 0; pn < this.props.pluralNouns; pn++) {
             pluralNounsArray.push(
-                <div className="textEntry">
+                <div className="textEntry" key={pn}>
                     <p>Enter a Plural Noun: </p>
                     <input
                         type='text'
@@ -342,7 +358,7 @@ class GetMadLibs extends Component {
 
         for (var fn = 0; fn < this.props.femaleNames; fn++) {
             femaleNamesArray.push(
-                <div className="textEntry">
+                <div className="textEntry" key={fn}>
                     <p>Enter a Female Name: </p>
                     <input
                         type='text'
@@ -355,7 +371,7 @@ class GetMadLibs extends Component {
 
         for (var mn = 0; mn < this.props.maleNames; mn++) {
             maleNamesArray.push(
-                <div className="textEntry">
+                <div className="textEntry" key={mn}>
                     <p>Enter a Male Name: </p>
                     <input
                         type='text'
@@ -368,7 +384,7 @@ class GetMadLibs extends Component {
 
         for (var aj = 0; aj < this.props.adjectives; aj++) {
             adjectivesArray.push(
-                <div className="textEntry">
+                <div className="textEntry" key={aj}>
                     <p>Enter an Adjective: </p>
                     <input
                         type='text'
@@ -381,7 +397,7 @@ class GetMadLibs extends Component {
 
         for (var av = 0; av < this.props.adverbs; av++) {
             adverbsArray.push(
-                <div className="textEntry">
+                <div className="textEntry" key={av}>
                     <p>Enter an Adverb: </p>
                     <input
                         type='text'
@@ -394,7 +410,7 @@ class GetMadLibs extends Component {
 
         for (var v = 0; v < this.props.verbs; v++) {
             verbsArray.push(
-                <div className="textEntry">
+                <div className="textEntry" key={v}>
                     <p>Enter an Verb: </p>
                     <input
                         type='text'
@@ -407,7 +423,7 @@ class GetMadLibs extends Component {
 
         for (var vd = 0; vd < this.props.verbsEd; vd++) {
             verbsEdArray.push(
-                <div className="textEntry">
+                <div className="textEntry" key={vd}>
                     <p>Enter an Verb ending in 'ed': </p>
                     <input
                         type='text'
@@ -420,7 +436,7 @@ class GetMadLibs extends Component {
 
         for (var vs = 0; vs < this.props.verbsS; vs++) {
             verbsSArray.push(
-                <div className="textEntry">
+                <div className="textEntry" key={vs}>
                     <p>Enter an Verb ending in 's': </p>
                     <input
                         type='text'
@@ -433,7 +449,7 @@ class GetMadLibs extends Component {
 
         for (var vg = 0; vg < this.props.verbsIng; vg++) {
             verbsIngArray.push(
-                <div className="textEntry">
+                <div className="textEntry" key={vg}>
                     <p>Enter an Verb ending in 'ing': </p>
                     <input
                         type='text'
@@ -446,7 +462,7 @@ class GetMadLibs extends Component {
 
         for (var c = 0; c < this.props.colors; c++) {
             colorsArray.push(
-                <div className="textEntry">
+                <div className="textEntry" key={c}>
                     <p>Enter a Color: </p>
                     <input
                         type='text'
@@ -459,7 +475,7 @@ class GetMadLibs extends Component {
 
         for (var f = 0; f < this.props.foods; f++) {
             foodsArray.push(
-                <div className="textEntry">
+                <div className="textEntry"key={f}>
                     <p>Enter a Food: </p>
                     <input
                         type='text'
@@ -472,7 +488,7 @@ class GetMadLibs extends Component {
 
         for (var bp = 0; bp < this.props.bodyParts; bp++) {
             bodyPartsArray.push(
-                <div className="textEntry">
+                <div className="textEntry" key={bp}>
                     <p>Enter a Body Part: </p>
                     <input
                         type='text'
@@ -506,6 +522,45 @@ class GetMadLibs extends Component {
                 <p id='error'>{this.state.errorMessage}</p>
             </div>
         )
+    }
+}
+
+class Popup extends Component {
+    render() {
+        const madLibsExplanation = "Mad Libs is a game where you enter a number of random words, according to the type of word that should be entered. Possible types of words are singular or plural nouns, verbs ending in 's', 'ing' or 'ed', adjectives and adverbs, names, foods, colors, etc. See the explanations below for further clarification on types of words.";
+        const nounsExplanation = "A singular noun is a word used to identify a person, place or thing. \ne.g. school, book, shoe, bee, etc.";
+        const pluralNounsExplanation = "A plural noun is any word used to identify any class of people, places, or things. \ne.g. schools, books, shoes, bees, etc.";
+        const adjectivesExplanation = "An adjective is any word used to modify a noun or describe its attributes. \ne.g. happy, ancient, smart, or tiny, etc.";
+        const adverbsExplanation = "An adverb is a word that modifies a verb, an adjective or another adverb. They usually will end in an 'ly' but not always. \ne.g. eagerly, quickly, patiently, politely, etc.";
+        const verbsExplanation = "A verb is a word that describes an action being done. The type of verb needed here has no ending on it, such as play, skip, snap, or stop.";
+        const verbsEdExplanation = "A verb is a word that describes an action being done. The type of verb needed here will have an 'ed' on the end signifying the past tense, such as played, skipped, snapped, or stopped;";
+        const verbsSExplanation = "A verb is a word that describes an action being done. The type of verb needed here will have an 's' on the end, signifying that the action is currently being done, such as plays, skips, snaps, or stops.";
+        const verbsIngExplanation = "A verb is a word that describes an action being done. The type of verb needed here will have an 'ing' on the end, signifying that the action is currently being done, such as playing, skipping, snapping, or stopping.";
+
+        return (
+            <div className='popup'>
+                <div className='popup_inner'>
+                    <h3>{madLibsExplanation}</h3>
+                    <h4>Singular nouns: </h4>
+                    <p>{nounsExplanation}</p>
+                    <h4>Plural nouns: </h4>
+                    <p>{pluralNounsExplanation}</p>
+                    <h4>Adjectives: </h4>
+                    <p>{adjectivesExplanation}</p>
+                    <h4>Adverbs: </h4>
+                    <p>{adverbsExplanation}</p>
+                    <h4>Verbs: </h4>
+                    <p>{verbsExplanation}</p>
+                    <h4>Verbs ending in 'ed': </h4>
+                    <p>{verbsEdExplanation}</p>
+                    <h4>Verbs ending in 's': </h4>
+                    <p>{verbsSExplanation}</p>
+                    <h4>Verbs ending in 'ing': </h4>
+                    <p>{verbsIngExplanation}</p>
+                    <button className="close" onClick={this.props.closePopup}>Close Me</button>
+                </div>
+            </div>
+        );
     }
 }
 
