@@ -263,8 +263,8 @@ class GetMadLibs extends Component {
     };
 
     handleNounChange = (i, e) => {
-        console.log(i);
-        console.log(e);
+        console.log("i"+ i);
+        console.log("e" + e);
         var newValues = this.state.nouns.slice();
         newValues[i] = e.target.value.toUpperCase();
         this.setState({nouns: newValues});
