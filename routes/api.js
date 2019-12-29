@@ -62,7 +62,8 @@ router.post('/courses', function(req, res) {
             courseNumber: body.courses[i].courseNumber,
             courseName: body.courses[i].courseName,
             semesterTaken: body.courses[i].semesterTaken,
-            grade: body.courses[i].grade
+            grade: body.courses[i].grade,
+            semesterInt: body.courses[i].semesterInt
         });
         newCourse.save(function(err) {
             if (err) {

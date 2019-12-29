@@ -1,6 +1,7 @@
 div.madLibs {
-    margin-left: auto;
-    margin-right: auto;
+    border-bottom: 1px solid #6F3524;
+    border-top: 3px solid #6F3524;
+    margin: 0px auto;
     white-space: pre-wrap;
     background: #e8af78;
 }
