@@ -60,7 +60,7 @@ router.post('/courses', function(req, res) {
     for(var i = 0; i < body.courses.length; i ++) {
         var newCourse = new Course({
             courseNumber: body.courses[i].courseNumber,
-            courseName: body.courses[i].courseNumber,
+            courseName: body.courses[i].courseName,
             semesterTaken: body.courses[i].semesterTaken,
             grade: body.courses[i].grade
         });
