@@ -141,7 +141,7 @@ class MadLibs extends Component {
             return (
             <div>
                 <h2> Let's Play Mad Libs! </h2>
-                <button> onclick={this.togglePopup.bind(this)} ? </button>
+                <button onclick={this.togglePopup.bind(this)}> ? </button>
                 {this.state.showPopup ?
                     <Popup closePopup={this.togglePopup.bind(this)}/>
                     : null
