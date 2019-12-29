@@ -8,7 +8,15 @@ let mongoose = require('mongoose');
 let Course = require('../models/course');
 let MadLib = require('../models/madlib');
 
-router.get('/courses', async function(req, res, next) {
+router.options('/courses', function (req, res) {
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    res.setHeader("Access-Control-Allow-Methods", "GET");
+    res.setHeader("Access-Control-Allow-Headers", "accept, content-type");
+    res.setHeader("Access-Control-Max-Age", "1728000");
+    res.status(200).send();
+});
+
+router.get('/courses', async function(req, res) {
 
   var allowedOrigins = ['https://amandalewisdev.com', 'https://dev.amandalewisdev.com'];
   var origin = req.headers.origin;
@@ -27,7 +35,7 @@ router.get('/courses', async function(req, res, next) {
   );
 });
 
-router.post('/course', function(req, res, next) {
+router.post('/course', function(req, res) {
   var newCourse = new Course({
     courseNumber: req.body.courseNumber,
     courseName: req.body.courseNumber,
@@ -46,7 +54,7 @@ router.post('/course', function(req, res, next) {
   });
 });
 
-router.post('/courses', function(req, res, next) {
+router.post('/courses', function(req, res) {
     var body = req.body;
     var added = true;
     for(var i = 0; i < body.courses.length; i ++) {
@@ -70,6 +78,14 @@ router.post('/courses', function(req, res, next) {
     else {
         res.status(400).send({"success": false});
     }
+});
+
+router.options('/madLib', function (req, res) {
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    res.setHeader("Access-Control-Allow-Methods", "GET");
+    res.setHeader("Access-Control-Allow-Headers", "accept, content-type");
+    res.setHeader("Access-Control-Max-Age", "1728000");
+    res.status(200).send();
 });
 
 /**
