@@ -26,6 +26,7 @@
     "mongoose": "^5.7.7",
     "morgan": "^1.9.1",
     "node-mailer": "^0.1.1",
-    "pug": "^2.0.4"
+    "pug": "^2.0.4",
+    "react-overflow-scrolling": "^1.0.1"
   }
 }

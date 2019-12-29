@@ -161,7 +161,7 @@ class MadLibs extends Component {
                 colors={this.state.data.colorsNeeded}
                 foods={this.state.data.foodsNeeded}
                 bodyParts={this.state.data.bodyPartsNeeded}
-                callback={this.ReturnMadLibs.bind(this)}
+                returnMadLibs={this.ReturnMadLibs.bind(this)}
             />
             </div>
             )
@@ -198,26 +198,65 @@ class GetMadLibs extends Component {
             done: false,
             errorMessage:""
         };
+        this.setState({
+            nouns: this.fillWithEmptyStrings(this.state.nouns, this.props.nouns),
+            pluralNouns: this.fillWithEmptyStrings(this.state.pluralNouns, this.props.pluralNouns),
+            femaleNames: this.fillWithEmptyStrings(this.state.femaleNames, this.props.femaleNames),
+            maleNames: this.fillWithEmptyStrings(this.state.maleNames, this.props.maleNames),
+            adjectives: this.fillWithEmptyStrings(this.state.adjectives, this.props.adjectives),
+            adverbs: this.fillWithEmptyStrings(this.state.adverbs, this.props.adverbs),
+            verbs: this.fillWithEmptyStrings(this.state.verbs, this.props.verbs),
+            verbsEd: this.fillWithEmptyStrings(this.state.verbsEd, this.props.verbsEd),
+            verbsS: this.fillWithEmptyStrings(this.state.verbsS, this.props.verbsS),
+            verbsIng: this.fillWithEmptyStrings(this.state.verbsIng, this.props.verbsIng),
+            colors: this.fillWithEmptyStrings(this.state.colors, this.props.colors),
+            foods: this.fillWithEmptyStrings(this.state.foods, this.props.foods),
+            bodyParts: this.fillWithEmptyStrings(this.state.bodyParts, this.props.bodyParts)
+        });
+
+    }
+
+    fillWithEmptyStrings(arr, len) {
+        for(var i = 0; i < len; i++) {
+            arr[i] = "";
+        }
+        return arr;
+    }
+
+    checkNotEmpty(arr, len) {
+        var valid = true;
+        if (arr.length !== len) {
+            valid = false;
+        }
+        else {
+            for (var i = 0; i < len; i++) {
+                let str = arr[i];
+                if (str.length === 0) {
+                    valid = false;
+                }
+            }
+        }
+        return valid;
     }
 
     checkDone() {
         if (
-            this.props.nouns === this.state.nouns.length &&
-            this.props.pluralNouns === this.state.pluralNouns.length &&
-            this.props.femaleNames === this.state.femaleNames.length &&
-            this.props.maleNames === this.state.maleNames.length &&
-            this.props.adjectives === this.state.adjectives.length &&
-            this.props.adverbs === this.state.adverbs.length &&
-            this.props.verbs === this.state.verbs.length &&
-            this.props.verbsEd === this.state.verbsEd.length &&
-            this.props.verbsS === this.state.verbsS.length &&
-            this.props.verbsIng === this.state.verbsIng.length &&
-            this.props.colors === this.state.colors.length &&
-            this.props.foods === this.state.foods.length &&
-            this.props.bodyParts === this.state.bodyParts.length
+            this.checkNotEmpty(this.state.nouns, this.props.nouns) &&
+            this.checkNotEmpty(this.state.pluralNouns, this.props.pluralNouns) &&
+            this.checkNotEmpty(this.state.femaleNames, this.props.femaleNames) &&
+            this.checkNotEmpty(this.state.maleNames, this.props.maleNames) &&
+            this.checkNotEmpty(this.state.adjectives, this.props.adjectives) &&
+            this.checkNotEmpty(this.state.adverbs, this.props.adverbs) &&
+            this.checkNotEmpty(this.state.verbs, this.props.verbs) &&
+            this.checkNotEmpty(this.state.verbsEd, this.props.verbsEd) &&
+            this.checkNotEmpty(this.state.verbsS, this.props.verbsS) &&
+            this.checkNotEmpty(this.state.verbsIng, this.props.verbsIng) &&
+            this.checkNotEmpty(this.state.colors, this.props.colors) &&
+            this.checkNotEmpty(this.state.foods, this.props.foods) &&
+            this.checkNotEmpty(this.state.bodyParts, this.props.bodyParts)
         ) {
             this.setState({done: true, errorMessage:""});
-            this.props.callback(
+            this.props.returnMadLibs(
                 this.state.nouns,
                 this.state.pluralNouns,
                 this.state.femaleNames,
@@ -239,80 +278,82 @@ class GetMadLibs extends Component {
     };
 
     handleNounChange = (i, e) => {
+        console.log(i);
+        console.log(e);
         var newValues = this.state.nouns.slice();
-        newValues[i] = e.target.value;
+        newValues[i] = e.target.value.toUpperCase();
         this.setState({nouns: newValues});
     };
 
     handlePluralNounChange = (i, e) => {
         var newValues = this.state.pluralNouns.slice();
-        newValues[i] = e.target.value;
+        newValues[i] = e.target.value.toUpperCase();
         this.setState({nouns: newValues});
     };
 
     handleFemaleNameChange = (i, e) => {
         var newValues = this.state.femaleNames.slice();
-        newValues[i] = e.target.value;
+        newValues[i] = e.target.value.toUpperCase();
         this.setState({nouns: newValues});
     };
 
     handleMaleNameChange = (i, e) => {
         var newValues = this.state.maleNames.slice();
-        newValues[i] = e.target.value;
+        newValues[i] = e.target.value.toUpperCase();
         this.setState({nouns: newValues});
     };
 
     handleAdjectiveChange = (i, e) => {
         var newValues = this.state.adjectives.slice();
-        newValues[i] = e.target.value;
+        newValues[i] = e.target.value.toUpperCase();
         this.setState({nouns: newValues});
     };
 
     handleAdverbChange = (i, e) => {
         var newValues = this.state.adverbs.slice();
-        newValues[i] = e.target.value;
+        newValues[i] = e.target.value.toUpperCase();
         this.setState({nouns: newValues});
     };
 
     handleVerbChange = (i, e) => {
         var newValues = this.state.verbs.slice();
-        newValues[i] = e.target.value;
+        newValues[i] = e.target.value.toUpperCase();
         this.setState({nouns: newValues});
     };
 
     handleVerbEdChange = (i, e) => {
         var newValues = this.state.verbsEd.slice();
-        newValues[i] = e.target.value;
+        newValues[i] = e.target.value.toUpperCase();
         this.setState({nouns: newValues});
     };
 
     handleVerbSChange = (i, e) => {
         var newValues = this.state.verbsS.slice();
-        newValues[i] = e.target.value;
+        newValues[i] = e.target.value.toUpperCase();
         this.setState({nouns: newValues});
     };
 
     handleVerbIngChange = (i, e) => {
         var newValues = this.state.verbsIng.slice();
-        newValues[i] = e.target.value;
+        newValues[i] = e.target.value.toUpperCase();
         this.setState({nouns: newValues});
     };
 
     handleColorChange = (i, e) => {
         var newValues = this.state.colors.slice();
-        newValues[i] = e.target.value;
+        newValues[i] = e.target.value.toUpperCase();
         this.setState({nouns: newValues});
     };
 
     handleFoodChange = (i, e) => {
         var newValues = this.state.foods.slice();
-        newValues[i] = e.target.value;
+        newValues[i] = e.target.value.toUpperCase();
         this.setState({nouns: newValues});
     };
 
     handleBodyPartChange = (i, e) => {
         var newValues = this.state.bodyParts.slice();
-        newValues[i] = e.target.value;
+        newValues[i] = e.target.value.toUpperCase();
         this.setState({nouns: newValues});
     };
 
