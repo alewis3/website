@@ -96,7 +96,8 @@ class MadLibs extends Component {
              var piece = storyArr[i];
              if (piece.length > 1 && piece.length < 5) {
                  var subpiece2 = piece.substring(0, 2);
-                 var pieceNumber2 = piece.substring(2, 3);
+                 const len2 = piece.length;
+                 var pieceNumber2 = piece.substring(2, len2);
                  var number2 = -1;
                  if (subpiece2 === "PN") {
                      number2 = parseInt(pieceNumber2, 10);
@@ -132,7 +133,8 @@ class MadLibs extends Component {
                  }
                  else {
                      var subpiece1 = piece.substring(0,1);
-                     var pieceNumber1 = piece.substring(1, 2);
+                     const len1 = piece.length;
+                     var pieceNumber1 = piece.substring(1, len1);
                      var number1 = -1;
                      console.log(piece);
                      if (subpiece1 === "N") {
