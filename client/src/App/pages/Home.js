@@ -12,7 +12,7 @@ import MadLibs from './../components/MadLibs';
 
 class Home extends Component {
   render() {
-    const bio = "I am a Senior Computer Science major at St. Edward's University and I am interested in developing complex systems and learning more about backend frameworks like Python and Express apps written in Node.js. I currently have a 3.78 GPA and will graduate in May 2020 with a degree in Computer Science and a minor in Mathematics. In my off time I love to take my dog, Dana, on long walks by the Colorado River or to the dog park.";
+    const bio = "I am a Senior Computer Science major at St. Edward's University and I am interested in developing complex systems and learning more about backend frameworks like Python and Express apps written in Node.js. I currently have a 3.76 GPA and will graduate in May 2020 with a degree in Computer Science and a minor in Mathematics. In my off time I love to take my dog, Dana, on long walks by Lake Austin or to the dog park. I also enjoy playing guitar and learning new songs.";
     return (
     <div className="App">
       <Nav/>

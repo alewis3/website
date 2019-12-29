@@ -23,6 +23,7 @@ const madLibSchema = new Schema({
         required: true,
         type: Number
     },
+    title: String, 
     nounsNeeded: {type: Number, default: 0},
     pluralNounsNeeded: {type: Number, default: 0},
     femaleNamesNeeded: {type: Number, default: 0},

@@ -106,7 +106,7 @@ router.get('/madLib', async function (req, res) {
                 function (err, result) {
                     if (err) {
                         console.log(err);
-                        return err;
+                        res.status(400).json({error: err});
                     }
                     else {
                         console.log(result);
