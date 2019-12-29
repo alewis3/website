@@ -68,6 +68,7 @@ class MadLibs extends Component {
     }
 
     resetStory = () => {
+        console.log("resetting");
         this.setState({
             data: {},
             isComplete: false,
@@ -200,7 +201,7 @@ class MadLibs extends Component {
                 <div className="madLibs">
                     <h2> Let's Play Mad Libs! </h2>
                     <p id="story">{this.parseStoryArray(storyArray)}</p>
-                    <button clasName="btn" onClick={this.resetStory()}> Play Again? </button>
+                    <button className="btn" onClick={this.resetStory()}> Play Again? </button>
                 </div>
             )
         }
@@ -389,6 +390,7 @@ class GetMadLibs extends Component {
                 <div className="textEntry" key={n}>
                     <p>Enter a Noun: </p>
                     <input
+                        className="txt"
                         type='text'
                         value={this.state.nouns[n]}
                         name={this.state.nouns[n]}
@@ -402,6 +404,7 @@ class GetMadLibs extends Component {
                 <div className="textEntry" key={pn}>
                     <p>Enter a Plural Noun: </p>
                     <input
+                        className="txt"
                         type='text'
                         value={this.state.pluralNouns[pn]}
                         name={this.state.pluralNouns[pn]}
@@ -415,6 +418,7 @@ class GetMadLibs extends Component {
                 <div className="textEntry" key={fn}>
                     <p>Enter a Female Name: </p>
                     <input
+                        className="txt"
                         type='text'
                         value={this.state.femaleNames[fn]}
                         name={this.state.femaleNames[fn]}
@@ -428,6 +432,7 @@ class GetMadLibs extends Component {
                 <div className="textEntry" key={mn}>
                     <p>Enter a Male Name: </p>
                     <input
+                        className="txt"
                         type='text'
                         value={this.state.maleNames[mn]}
                         name={this.state.maleNames[mn]}
@@ -441,6 +446,7 @@ class GetMadLibs extends Component {
                 <div className="textEntry" key={aj}>
                     <p>Enter an Adjective: </p>
                     <input
+                        className="txt"
                         type='text'
                         value={this.state.adjectives[aj]}
                         name={this.state.adjectives[aj]}
@@ -454,6 +460,7 @@ class GetMadLibs extends Component {
                 <div className="textEntry" key={av}>
                     <p>Enter an Adverb: </p>
                     <input
+                        className="txt"
                         type='text'
                         value={this.state.adverbs[av]}
                         name={this.state.adverbs[av]}
@@ -467,6 +474,7 @@ class GetMadLibs extends Component {
                 <div className="textEntry" key={v}>
                     <p>Enter an Verb: </p>
                     <input
+                        className="txt"
                         type='text'
                         value={this.state.verbs[v]}
                         name={this.state.verbs[v]}
@@ -480,6 +488,7 @@ class GetMadLibs extends Component {
                 <div className="textEntry" key={vd}>
                     <p>Enter an Verb ending in 'ed': </p>
                     <input
+                        className="txt"
                         type='text'
                         value={this.state.verbsEd[vd]}
                         name={this.state.verbsEd[vd]}
@@ -493,6 +502,7 @@ class GetMadLibs extends Component {
                 <div className="textEntry" key={vs}>
                     <p>Enter an Verb ending in 's': </p>
                     <input
+                        className="txt"
                         type='text'
                         value={this.state.verbsS[vs]}
                         name={this.state.verbsS[vs]}
@@ -506,6 +516,7 @@ class GetMadLibs extends Component {
                 <div className="textEntry" key={vg}>
                     <p>Enter an Verb ending in 'ing': </p>
                     <input
+                        className="txt"
                         type='text'
                         value={this.state.verbsIng[vg]}
                         name={this.state.verbsIng[vg]}
@@ -519,6 +530,7 @@ class GetMadLibs extends Component {
                 <div className="textEntry" key={c}>
                     <p>Enter a Color: </p>
                     <input
+                        className="txt"
                         type='text'
                         value={this.state.colors[c]}
                         name={this.state.colors[c]}
@@ -532,6 +544,7 @@ class GetMadLibs extends Component {
                 <div className="textEntry"key={f}>
                     <p>Enter a Food: </p>
                     <input
+                        className="txt"
                         type='text'
                         value={this.state.foods[f]}
                         name={this.state.foods[f]}
@@ -545,6 +558,7 @@ class GetMadLibs extends Component {
                 <div className="textEntry" key={bp}>
                     <p>Enter a Body Part: </p>
                     <input
+                        className="txt"
                         type='text'
                         value={this.state.bodyParts[bp]}
                         name={this.state.bodyParts[bp]}

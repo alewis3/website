@@ -45,6 +45,11 @@ div.madLibs {
     background: #6F3524;
 }
 
+input.txt {
+    border: black 1px;
+    padding: 2px;
+}
+
 #error {
     color: red;
 }
