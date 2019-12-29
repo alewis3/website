@@ -161,7 +161,7 @@ class MadLibs extends Component {
                 colors={this.state.data.colorsNeeded}
                 foods={this.state.data.foodsNeeded}
                 bodyParts={this.state.data.bodyPartsNeeded}
-                callback={this.ReturnMadLibs}
+                callback={this.ReturnMadLibs.bind(this)}
             />
             </div>
             )
@@ -518,7 +518,7 @@ class GetMadLibs extends Component {
                 <input
                     type='submit'
                     value='Done'
-                    onClick={this.checkDone}
+                    onClick={this.checkDone.bind(this)}
                 />
                 <p id='error'>{this.state.errorMessage}</p>
             </div>
