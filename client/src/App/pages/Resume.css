@@ -1,0 +1,40 @@
+.HeaderWrapper {
+    background-color: #F3E195;
+    color: #6F3524;
+    height: auto;
+    border-bottom: 2px solid #6F3524;
+}
+.HeaderImg {
+    display: block;
+    align-content: center;
+    margin-right: auto;
+    margin-left: auto;
+    width: 300px;
+    height: 300px;
+}
+#Name {
+    display: block;
+    font-size: 96pt;
+    text-align: center;
+    width: auto;
+    height: auto;
+}
+#Tagline {
+    font-size: 18pt;
+}
+@media only screen and (max-width: 768px) {
+    .HeaderImg {
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        width: 20%;
+        height: auto;
+        align-content: center;
+    }
+    .HeaderWrapper {
+        height: auto;
+    }
+    #Name {
+        font-size: 48pt;
+    }
+}
