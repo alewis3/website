@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="5121d3c5-5ab5-42d6-8884-e38e499fda8b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/client/public/email_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/github_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/linkedin_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/phone_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/profile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/star_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/steds_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/walgreens_logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/App/components/CSS/ContactInfo.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/App/components/CSS/Experience.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/App/components/CSS/Intro.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/App/components/CSS/Skills.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/App/components/CSS/Tools.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/App/components/ContactInfo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/App/components/Experience.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/App/components/Intro.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/App/components/Skills.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/App/components/Tools.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/App/pages/Resume.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/App/pages/Resume.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/public/linkedin.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/linkedin.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/App/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/App/components/Awards.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App/components/Awards.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/App/components/ButtonRow.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App/components/ButtonRow.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/App/components/CSS/Contact.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App/components/CSS/Contact.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/App/components/CSS/Project.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App/components/CSS/Project.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/App/components/Contact.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App/components/Contact.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/App/components/MyHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App/components/MyHeader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/App/components/Project.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App/components/Project.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/App/pages/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App/pages/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1WwWmyubpIwHmhlSfzMgAKVH70o" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="MTConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/client/src/App/components/CSS" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="ResumeHeader.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/client/src/App/components/ResumeHeader.js" working-dir="$PROJECT_DIR$/client/src/App/components">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Node.js.ResumeHeader.js" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5121d3c5-5ab5-42d6-8884-e38e499fda8b" name="Default Changelist" comment="" />
+      <created>1580061300811</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1580061300811</updated>
+      <workItem from="1580061303682" duration="21554000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1899" height="286" key="GridCell.Tab.0.bottom" timestamp="1580078175856">
+      <screen x="1440" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1899" height="286" key="GridCell.Tab.0.bottom/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1580078175856" />
+    <state width="1899" height="286" key="GridCell.Tab.0.center" timestamp="1580078175854">
+      <screen x="1440" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1899" height="286" key="GridCell.Tab.0.center/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1580078175854" />
+    <state width="1899" height="286" key="GridCell.Tab.0.left" timestamp="1580078175852">
+      <screen x="1440" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1899" height="286" key="GridCell.Tab.0.left/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1580078175852" />
+    <state width="1899" height="286" key="GridCell.Tab.0.right" timestamp="1580078175854">
+      <screen x="1440" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1899" height="286" key="GridCell.Tab.0.right/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1580078175854" />
+    <state x="1909" y="179" key="SettingsEditor" timestamp="1580086875420">
+      <screen x="1440" y="0" width="1920" height="1080" />
+    </state>
+    <state x="1909" y="179" key="SettingsEditor/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1580086875420" />
+    <state x="2056" y="151" width="687" height="777" key="find.popup" timestamp="1580087168013">
+      <screen x="1440" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2056" y="151" width="687" height="777" key="find.popup/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1580087168013" />
+  </component>
+</project>
