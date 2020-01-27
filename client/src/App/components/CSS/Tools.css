@@ -1,0 +1,36 @@
+.TechnicalTools {
+    color: #6F3524;
+    background-color: darkgrey;
+    border-top: 1px solid #6F3524;
+    border-bottom: 2px solid #6F3524;
+}
+.TechnicalToolsSection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.ToolList {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 240px;
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    position: relative;
+}
+li.Tool {
+    text-align: left;
+    padding-inline-start: 10px;
+}
+.List {
+    text-align: center;
+    list-style-position: inside;
+}
+.star {
+    width: 20px;
+    height: auto;
+    display: inline-block;
+}

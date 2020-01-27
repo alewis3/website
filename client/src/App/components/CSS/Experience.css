@@ -1,0 +1,61 @@
+div.ProjectSection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.WorkLogo {
+    height: 240px;
+}
+div.Projects {
+    padding: 2px;
+    display: block;
+    color: #6F3524;
+    background: #e8af78;
+    border-bottom: 3px solid #6F3524;
+    border-top: 3px solid #6F3524;
+}
+
+div.project-section br {
+    display: none;
+}
+.Works {
+    padding: 2px;
+    display: block;
+    color: #6F3524;
+    background: #EF959A;
+    border-bottom: 3px solid #6F3524;
+    border-top: 3px solid #6F3524;
+}
+div.WorkSection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+}
+div.work {
+    padding-top: 15px;
+    border: 2px solid #6F3524;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 240px;
+    background: white;
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    position: relative;
+}
+.Responsibilities {
+    text-align: left;
+    padding-inline-start: 10px;
+    padding-inline-end: 10px;
+}
+@media only screen and (max-width: 600px) {
+    div.ProjectSection {
+        display: block;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+}

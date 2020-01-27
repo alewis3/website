@@ -1,0 +1,11 @@
+.Skills {
+    color: #6F3524;
+    /*border-top: 2px solid #6F3524;*/
+}
+.SkillList {
+    text-align: center;
+}
+ul {
+    text-align: center;
+    list-style-position: inside;
+}
