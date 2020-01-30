@@ -6,14 +6,14 @@ class MyHeader extends Component {
     render() {
         const HeaderImg = () => (
             <img className="header-img" src={this.props.src} alt="header"/>
-        )
+        );
         const MyHeader = () => (
             <div id="header">
                 <div className="header-wrapper">
                     <HeaderImg/>
                     <div>
                         <h1>Amanda G. Lewis</h1>
-                        <p>SOFTWARE DESIGNER AND ENGINEER</p>
+                        <p>{this.props.abt}</p>
                     </div>
                     <ButtonRow/>
                 </div>

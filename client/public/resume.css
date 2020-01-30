@@ -1,0 +1,87 @@
+body {
+    color: #6F3524;
+}
+
+#header {
+    background-color: #F3E195;
+}
+#header-text {
+    display:flex;
+    align-items: center;
+    text-align: center;
+    /*horiz-align: center;*/
+}
+
+#header-logo {
+    width: 300px;
+    height: auto;
+}
+#intro {
+    border-top: 2px solid #6F3524;
+    border-bottom: 2px solid #6F3524;
+}
+#contact {
+    border-right: 2px solid #6F3524;
+    background-color: #e8af78;
+    align-items: center;
+    text-align: center;
+}
+.contact-logo {
+    width: 60px;
+    height: auto;
+}
+#abt {
+    background-color: #FAEDCA;
+    align-items: center;
+    text-align: center;
+}
+#me {
+    align-self: center;
+    height: 300px;
+    width: auto;
+}
+#education-skills {
+    background-color: #EBBAB9;
+    border-bottom: 2px solid #6F3524;
+    border-right: 2px solid #6F3524;
+}
+#edu {
+    border-bottom: 2px solid #6F3524;
+    text-align: center;
+}
+#skills {
+    text-align: center;
+    list-style-position: inside;
+}
+.star {
+    width: 20px;
+    height: auto;
+    display: inline-block;
+}
+#tools {
+    background-color: #F9DEC9;
+    text-align: center;
+    border-bottom: 2px solid #6F3524;
+}
+#work-exp {
+    background-color: #AEC5EB;
+    padding: 10px;
+    text-align: center;
+    border-bottom: 2px solid #6F3524;
+}
+#projects {
+    background-color: #F2C078;
+    padding: 10px;
+    text-align: center;
+    border-bottom: 2px solid #6F3524;
+}
+#awards {
+    background-color: #FCF6B1;
+    padding: 10px;
+    text-align: center;
+}
+#footer {
+    background-color: #EF959A;
+    padding: 20px;
+    text-align: center;
+}
