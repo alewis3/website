@@ -1,0 +1,70 @@
+div.madLibs {
+    border-bottom: 3px solid #6F3524;
+    border-top: 3px solid #6F3524;
+    margin: 0px auto;
+    white-space: pre-wrap;
+    background: #e8af78;
+}
+
+.textEntry {
+    color: #6F3524;
+}
+
+#story {
+    white-space: pre-wrap;
+    color: #6F3524;
+}
+
+#title {
+    color: #6F3524;
+}
+
+.popup {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background-color: rgba(0,0,0, 0.5);
+}
+.popup_inner {
+    padding: 4px;
+    position: absolute;
+    left: 25%;
+    right: 25%;
+    top: 9%;
+    bottom: 9%;
+    margin: auto;
+    border-radius: 20px;
+    background: white;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    white-space: pre-wrap;
+}
+
+.btn {
+    border: none;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: table-cell;
+    font-size: 12px;
+    margin: 4px 4px;
+    border-color: white;
+    border-radius: 8px;
+    width: 20vw;
+    background: #6F3524;
+}
+
+input.txt {
+    border: black 1px;
+    padding: 2px;
+}
+
+#error {
+    color: red;
+}
