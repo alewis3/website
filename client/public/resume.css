@@ -84,3 +84,13 @@ body {
     padding: 20px;
     text-align: center;
 }
+
+@media only screen and (max-width: 600px) {
+    #me {
+        height: 25vh;
+        width: auto;
+    }
+    #contact {
+        border-bottom: 2px solid #6F3524;
+    }
+}
