@@ -22,7 +22,6 @@ class Home extends Component {
       <ProjectSection/>
       <Awards/>
       <Table/>
-      <Contact/>
       <Footer/>
       <ScrollUpButton
         StopPosition={0}
