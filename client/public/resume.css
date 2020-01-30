@@ -93,5 +93,9 @@ body {
     }
     #contact {
         border-bottom: 2px solid #6F3524;
+        border-right: none;
+    }
+    #education-skills {
+        border-right: none;
     }
 }
