@@ -11,9 +11,9 @@ class Table extends Component {
 
     componentDidMount = () => {
         let comp = this;
-        axios.get('https://amandalewisdev.com/api/getCourses').then(function(response) {
+        axios.get('https://amandalewisdev.com/api/courses').then(function(response) {
             if (response.status === 200) {
-               comp.setState({data: response.data.query});
+               comp.setState({data: response.data.courses});
             } else {
                console.log("Could not grab courses");
             }

@@ -24,8 +24,8 @@ class Nav extends Component {
         element.scrollIntoView(true, {behavior: "smooth"});
     }
 
-    handleContactClick = () => {
-        var element = document.getElementById("contact");
+    handleMadLibsClick = () => {
+        var element = document.getElementById("madLibs");
         element.scrollIntoView(true, {behavior: "smooth"});
     }
 
@@ -36,7 +36,7 @@ class Nav extends Component {
                 <a href="#projects" onClick={this.handleProjectsClick} value="projects">PROJECTS</a>
                 <a href="#awards" onClick={this.handleAwardsClick} value="awards">AWARDS</a>
                 <a href="#courses" onClick={this.handleCoursesClick} value="courses">STEM COURSES TAKEN</a>
-                <a href="#contact" onClick={this.handleContactClick} value="contact">CONTACT</a>
+                <a href="#madlibs" onClick={this.handleMadLibsClick} value="madLibs">MADLIBS</a>
             </div>
         );
     }
