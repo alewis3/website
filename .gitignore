@@ -254,7 +254,6 @@ __generated__
 *.class
 
 # Generated files
-bin/
 gen/
 release/
 
