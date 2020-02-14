@@ -19,6 +19,7 @@
     "bcryptjs": "^2.4.3",
     "concurrently": "^5.0.0",
     "cookie-parser": "^1.4.4",
+    "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "http-errors": "^1.7.3",
@@ -27,9 +28,9 @@
     "morgan": "^1.9.1",
     "node-mailer": "^0.1.1",
     "pug": "^2.0.4",
-    "react-overflow-scrolling": "^1.0.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
+    "react-overflow-scrolling": "^1.0.1",
     "react-scroll-up-button": "^1.6.4"
   }
 }
