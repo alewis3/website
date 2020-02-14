@@ -1,0 +1,23 @@
+#header {
+    padding: 50px;
+    background-color: #F3E195;
+    text-align: center;
+}
+
+#middle {
+    padding: 50px;
+    background-color: #EF959A;
+}
+
+.card {
+    justify-content: center;
+    text-align: center;
+    background-color: #e8af78;
+}
+
+.button {
+    background-color: #6F3524;
+    color: white;
+    border-radius: 50px;
+    border: 2px solid #6F3524;
+}
