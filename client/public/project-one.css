@@ -1,0 +1,49 @@
+body {
+    color: #6F3524;
+}
+
+.about {
+    padding: 20px;
+}
+
+#emotional-processing {
+    width: 45vw;
+    height: auto;
+}
+
+#action-cycle-layers {
+    width: 25vw;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+#goal{
+    text-align: center;
+}
+
+#slips-btn {
+    width: 10vw;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+#mistakes-btn {
+    width: 10vw;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.cntr {
+    text-align: center;
+}
+
+#errors-in-action-cycle {
+    width: 45vw;
+    height: auto;
+    margin: auto;
+    display: block;
+}
