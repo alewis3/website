@@ -17,10 +17,14 @@ class ProjectSection extends Component {
         function GoBio() {
             return {__html: "In the Spring of 2019, I took the SWE I class and worked on a scrum team of 6 to build a system that would utilize (simulated) automated vehicles to deliver services and goods to consumers. I oversaw the building of the vehicle simulator, written in python and using multithreading to simulate multiple vehicles at once. The results are on my github, under the <a href='https://github.com/alewis3/Personal/tree/master/vehicleSimulatorPython' target='_blank'>Personal</a> repo."}
         }
+        function SPBio() {
+            return {__html: "Over the course of two semesters I worked on my senior project with two other individuals. The project, entitled <i>Host, Post, and Compost </i> focused on connecting people who are not able to compost (People who live in apartments or staying in hotels) with people who can compost and already do so (Homeowners with a pile in their backyard or a compost pickup service)."}
+        }
         const ProjectSection = () => (
             <div className="projects" id="projects">
                 <h1>Projects and Internships</h1>
                 <div className="project-section">
+                    <Project tiele="Senior Project (2019-2020)" description={SPBio()} src="/HPC.png" alt="HPC" />
                     <Project title="We-IoT Project" description={IoTBio()} src="/We-IoT.png" alt="We-IoT Logo"/>
                     <Project title="Java Multithreading Vehicle Simulator Project" description={JVMTBio()} src="/java.jpg" alt="Java Logo"/>
                     <Project title="Software Engineering Internship" description={ModBio()} src="/mod_logo.png" alt="Modernize Logo"/>

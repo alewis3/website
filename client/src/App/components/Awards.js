@@ -16,6 +16,7 @@ class Awards extends Component {
             <div className="awards" id="awards">
                 <h1>Awards</h1>
                 <div className="awards-wrapper">
+                    <Award src='/Grad.png' alt="Outstanding Grad in CS Amanda Lewis" text="Outstanding Computer Science Graduate - BS Program for the 2019-2020 academic school year"/>
                     <Award src='/CSAward.png' alt="Computer Science Award Amanda Lewis" text="Outstanding Student in First Year Computer Science Courses, awarded April 2018"/>
                     <Award src='/SpanishAward.png' alt="Spanish Award Amanda Lewis" text="Outstanding Student in Spanish, awarded April 2017"/>
                 </div>
