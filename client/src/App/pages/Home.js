@@ -18,7 +18,7 @@ class Home extends Component {
       <Nav/>
       <div className="content">
       <Header src="/header.png" abt="SOFTWARE DESIGNER AND ENGINEER"/>
-      <Bio text={bio} srcme="/linkedin.jpg" altme="Amanda Lewis" srcdana="/dana.png" altdana="dana"/>
+      <Bio text={bio} srcme="/Grad.jpg" altme="Amanda Lewis" srcdana="/dana.png" altdana="dana"/>
       <ProjectSection/>
       <Awards/>
       <Table/>
