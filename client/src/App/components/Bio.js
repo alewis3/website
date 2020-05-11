@@ -20,7 +20,7 @@ class Bio extends Component {
             <div className="bio" id="about">
                 <div className="floatleft">
                     <Photo/>
-                    {/*<Countdown timeTillDate="2020-05-09 06:00" timeFormat="YYYY-MM-DD HH:mm" timeTillDateFormatted="May 9th, 2020"/>*/}
+                    <Countdown timeTillDate="2020-07-16 07:40" timeFormat="YYYY-MM-DD HH:mm" timeTillDateFormatted="July 16th, 2020"/>
                 </div>
                 <About/>
                 <div className="clear"></div>
