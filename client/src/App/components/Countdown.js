@@ -56,7 +56,7 @@ class Countdown extends Component {
 
         const Countdown = () => (
             <div className="countdown">
-                <b>Countdown to Graduation!</b>
+                <b>Countdown to my Birthday!</b>
                 <div className="countdown-wrapper" onClick={this.gradClicked}>
                     {days && (<CountdownItem count={days} name="Days" radius={daysRadius}/>)}
                     {hours && (<CountdownItem count={hours} name="Hours" radius={hoursRadius}/>)}
