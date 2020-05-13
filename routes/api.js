@@ -26,7 +26,7 @@ router.get('/courses', async function(req, res) {
   await Course.find().lean().sort({semesterInt: 1}).exec(
       function (err, query) {
           if (err) {
-              return res.status(400).json({"success": false, "error": err});
+              return res.status(500).json({"success": false, "error": err});
           }
           else {
               return res.status(200).json({"success": true, "courses": query});
@@ -40,12 +40,13 @@ router.post('/course', function(req, res) {
     courseNumber: req.body.courseNumber,
     courseName: req.body.courseNumber,
     semesterTaken: req.body.semesterTaken,
-    grade: req.body.grade
+    grade: req.body.grade,
+    semesterInt: req.body.semesterInt
   });
   newCourse.save(function(err, data) {
     if (err) {
       console.log(err);
-      res.status(400).send({"success": false, "error": err});
+      res.status(500).send({"success": false, "error": err});
     } 
     else {
       console.log(data);
@@ -69,7 +70,6 @@ router.post('/courses', function(req, res) {
             if (err) {
                 console.log(err);
                 added = false;
-                res.status(400).send({"success": false, "error": err});
             }
         });
     }
@@ -77,7 +77,7 @@ router.post('/courses', function(req, res) {
         res.status(201).json({"success": true});
     }
     else {
-        res.status(400).send({"success": false});
+        res.status(500).send({"success": false});
     }
 });
 
