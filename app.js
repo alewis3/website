@@ -32,7 +32,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 app.use(express.static(path.join(__dirname, 'client/build')));
-
+app.use('/docs', express.static(path.join(__dirname, '/apidoc')))
 app.use('/', indexRouter);
 app.use('/api', apiRouter);
 
