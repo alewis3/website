@@ -24,7 +24,7 @@ class ProjectSection extends Component {
             <div className="projects" id="projects">
                 <h1>Projects and Internships</h1>
                 <div className="project-section">
-                    <Project tiele="Senior Project (2019-2020)" description={SPBio()} src="/HPC.png" alt="HPC" />
+                    <Project title="Host, Post, and Compost (Senior Project)" description={SPBio()} src="/HPC.png" alt="HPC" />
                     <Project title="We-IoT Project" description={IoTBio()} src="/We-IoT.png" alt="We-IoT Logo"/>
                     <Project title="Java Multithreading Vehicle Simulator Project" description={JVMTBio()} src="/java.jpg" alt="Java Logo"/>
                     <Project title="Software Engineering Internship" description={ModBio()} src="/mod_logo.png" alt="Modernize Logo"/>

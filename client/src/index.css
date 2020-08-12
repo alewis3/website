@@ -5,6 +5,13 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: 'Oswald', sans-serif;
+}
+.App {
+  font-weight: 700;
+}
+.subheading {
+  font-weight: 300;
 }
 
 code {

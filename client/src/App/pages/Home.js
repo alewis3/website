@@ -12,16 +12,16 @@ import MadLibs from './../components/MadLibs';
 
 class Home extends Component {
   render() {
-    const bio = "My name is Amanda, and I recently graduated from St. Edward's University with a 3.77 GPA and Magna Cum Laude honors. I am interested in developing complex systems and learning more about backend frameworks like Python and Express apps written in Node.js. I also am curious about frontend javascript frameworks like Vue with Nuxt. In my off time I love to take my dog, Dana, on long walks by Lake Austin or to the dog park. I also enjoy playing guitar and learning new songs."
+    const bio = "My name is Amanda, and I recently graduated from St. Edward's University with a degree in computer science and a minor in mathematics. I am interested in developing and maintaining complex systems and learning more about backend frameworks like Python and Express apps written in Node.js. I am also experimenting with frontend javascript frameworks like Vue with Nuxt. In my off time I love to take my dog, Dana, on long walks by Lake Austin or to the dog park. I also enjoy playing guitar and learning new songs; Arctic Monkeys songs are my favorite to learn!"
     return (
     <div className="App">
       <Nav/>
       <div className="content">
-      <Header src="/header.png" abt="SOFTWARE DESIGNER AND ENGINEER"/>
+      <Header src="/header.png" abt="SOFTWARE ENGINEER (UNDER ARMOUR)"/>
       <Bio text={bio} srcme="/Grad.jpg" altme="Amanda Lewis Graduate Photo" srcdana="/dana.png" altdana="dana"/>
       <ProjectSection/>
       <Awards/>
-      <Table/>
+      {/*<Table/>*/}
       <MadLibs/>
       <Footer/>
       <ScrollUpButton

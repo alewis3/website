@@ -19,7 +19,7 @@ class MyHeader extends Component {
                 </div>
                 
             </div>
-        )
+        );
         return (
             <MyHeader/>
         );
