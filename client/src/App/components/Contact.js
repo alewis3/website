@@ -11,7 +11,7 @@ class Contact extends Component {
                 <ContactInfo alt={"email"} src={"/email_icon.png"} text={"amandalewis2044@gmail.com"}/>
                 <div className={"Links"}>
                     <a className="ContactLink" href='https://github.com/alewis3'><img className={"ContactLinkImg"} alt="AL Github" src='/github_icon.png'/></a>
-                    <a className="ContactLink" href='https://www.linkedin.com/in/amanda-lewis-seu/'><img className={"ContactLinkImg"} alt="AL LinkedIn" src='/linkedin_icon.png'/></a>
+                    <a className="ContactLink" href='https://www.linkedin.com/in/amanda-lewis-mfp/'><img className={"ContactLinkImg"} alt="AL LinkedIn" src='/linkedin_icon.png'/></a>
                     <a className="ContactLink" href='https://amandalewisdev.com'><img className={"ContactLinkImg"} alt="AL Website" src='/header.png'/></a>
                 </div>
             </div>
